@@ -1,0 +1,43 @@
+.header figure {
+    border-bottom: 3px solid #FF0000;
+
+}
+.header figure p {
+    float:right;
+    text-align:center;
+    font-size: xx-large;
+    font-style: ;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    border-top: 2px solid #AAA;
+    background-color:#FF0000;
+    color:#FFF;
+    text-align:center;
+    padding:7px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.connexion_form h3 {
+    color:#FF0000;
+    text-align:center;
+
+}
+.connexion_form {
+    text-align: center;
+    padding:10px;
+}
