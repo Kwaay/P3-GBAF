@@ -1,16 +1,14 @@
+
+
 .header figure {
     border-bottom: 3px solid #FF0000;
-
+    /*margin-bottom: 200px;*/
 }
 .header figure p {
     float:right;
     text-align:center;
     font-size: xx-large;
-    font-style: ;
-    
 }
-
-
 
 
 
@@ -31,13 +29,100 @@
     left:0;
     right:0;
 }
+.footer a {
+    color: #FFF;
+}
 
 .connexion_form h3 {
     color:#FF0000;
     text-align:center;
+    padding: 10px;
 
 }
 .connexion_form {
     text-align: center;
     padding:10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #a6a6a6;
+    border: 2px solid black;
+    box-shadow: 1px 1px 10px 5px;
+    margin-top: 5vh;
+}
+.connexion_form label {
+    display: inline-block;
+    width: 25%;
+}
+.inscription_form {
+    text-align: center;
+    padding:10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #a6a6a6;
+    border: 2px solid black;
+    box-shadow: 1px 1px 10px 5px;
+    margin-top: 5vh;
+   
+}
+.inscription_form h3 {
+    color:#FF0000;
+    text-align: center;
+
+}
+.inscription_form label {
+    display: inline-block;
+    width: 25%;
+}
+.footer_mentions_legales {
+    color: white!important;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-weight: bold;
+}
+.footer_contact {
+    color: white!important;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-weight: bold;
+}
+.footer_index{
+    color: white!important;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-weight: bold;
+}
+a:link {
+    color:red;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a:visited {
+    color: red;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a:focus {
+    border-bottom: 1px solid;
+    background: #a6a6a6;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    background: #a6a6a6;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a:active {
+    border-bottom: 1px solid;
+    background: #a6a6a6;
+    text-decoration: none;
+    text-decoration-line: none;
+
 }
