@@ -7,8 +7,8 @@
     </head>
         
     <body>
-        <?php include "header.php" ?>
-        <?php include "footer.php" ?>
+    <?php include ("header.php") ?>
+    
 
         <div class="connexion_form">
             <h3><u>Connexion à l'Extranet</u></h3>
@@ -30,6 +30,7 @@
             <p>Pas encore inscrit ? <a href="inscription.php" class="link-button">S'inscrire</a></p>
             <p><a href="forgot.php" class="link-button">Mot de passe oublié ?</a></p>
             <br>
+    <?php include ("footer.php") ?>
     </body>
 </html>
 

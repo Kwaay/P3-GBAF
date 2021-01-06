@@ -7,8 +7,7 @@
     </head>
         
     <body>
-        <?php include "header.php" ?>
-        <?php include "footer.php" ?>
+    <?php include "header.php" ?>
 
         <div class="inscription_form">
             <h3><u>Inscription à l'Extranet</u></h3>
@@ -49,5 +48,6 @@
             <br>
             <p>Vous voulez vous connecter ? <a href="connexion.php" class="link-button">Se connecter</a></p>
             <br>
+    <?php include ("footer.php") ?>
     </body>
 </html>
