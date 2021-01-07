@@ -190,6 +190,95 @@
     margin-bottom: 2vh;
     margin-right: 2vh;
 }
+/* <--Page Acteur : Formation & Co--> */
+
+.acteur-formation-co {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid red; 
+    margin-bottom: 1vh;  
+}
+.text-formation-co-acteurs h2 {
+    margin-left: 2vh;
+}
+.text-formation-co-acteurs p {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 2vh;
+    width: 100%;
+    max-width:700px;
+    margin-left: 2vh;
+}
+.img-partenaires{    
+    text-align: center;
+}
+
+/* <-- Menu Commentaires--> */
+
+.commentaires {
+    border: 1px solid red;
+    padding: 1vh;
+    width: 100%;
+    max-width:1500px;
+    margin: 0 auto;
+} 
+
+.menu-commentaires {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    margin-left: 1vh;
+    
+}
+
+/* <--Bouton Commentaires--> */
+
+.bouton-commentaire {
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-bottom: auto;
+    padding: 0.5vh;
+    margin-right: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+.bouton-like-dislike {
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-bottom: auto;
+    margin-right: 2vh;
+    padding: 1vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+}
+.fa {
+    padding: 0.5vh;
+}
+
+/* <--Commentaires--> */
+
+.first-commentaire {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 1vh;
+    margin: 1vh;
+}
+.second-commentaire {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 1vh;
+    margin: 1vh;
+}
+.third-commentaire {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 1vh;
+    margin: 1vh;
+} 
 
 /* <--Formulaire de Connexion--> */
 
