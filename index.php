@@ -11,7 +11,7 @@
     <body>
        <section class="presentation-gbaf">
             <div class="texte-gbaf">
-                <h1>Le Groupement Banque Assurance Français (GBAF)</h1> 
+                <h1><u>Le Groupement Banque Assurance Français (GBAF)</u></h1> 
                 <h3>est une fédération représentant les 6 grands groupes français :</h3>
             <div class="logo-groupes">
                 <img src="images/bnp-paribas.png" alt ="Logo BNP" height=150 width=150 />
@@ -26,7 +26,7 @@
         </section>
 
             <div class="texte-partenaires">
-            <h2> Les Partenaires et Acteurs </h2>
+            <h2><u>Les Partenaires et Acteurs</u></h2>
             <p>Les produits et services bancaires sont nombreux et très variés. 
             Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.)
             recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.
@@ -37,7 +37,7 @@
         <div class="partenaire-formation-co">
             <img src="images/formation_co.png" alt="Logo de Formation&Co" height=150 width=300/>
             <div class="text-container">
-                <h3> Formation & Co </h3>
+                <h3><u>Formation & Co</u></h3>
                 <p> Formation&co est une association française présente sur tout le territoire.
                 Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.
                 Notre proposition : 
@@ -56,7 +56,7 @@
         <div class="partenaire-protect-people">
             <img src="images/protectpeople.png" alt="Logo de ProtectPeople" height=150 width=300/>
             <div class="text-container">
-                <h3> Protect People </h3>
+                <h3><u>Protect People</u></h3>
                 <p> Protectpeople finance la solidarité nationale.
                 Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale.
 
@@ -76,7 +76,7 @@
         <div class="partenaire-dsa-france">
             <img src="images/Dsa_france.png" alt="Logo de DSA France" height=150 width=300 />
             <div class="text-container">
-                <h3> DSA France </h3>
+                <h3><u>DSA France</u></h3>
                 <p> Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
                 Notre philosophie : s’adapter à chaque entreprise.
@@ -91,12 +91,12 @@
         <div class="partenaire-cde">
             <img src="images/CDE.png" alt="Logo de CDE" height=150 width=300 />
             <div class="text-container">
-                <h3> CDE </h3>
+                <h3><u>CDE</u></h3>
                 <p> La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
                 Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.</p>
             </div>
             <div class="button-cde">
-                <a href="cde.php" class="link-button"><p>Lire la suite</p></a>
+                <a href="cde.php" class="link-button">Lire la suite</a>
             </div>
             
         </div>
@@ -104,5 +104,3 @@
         <?php include ("footer.php"); ?> 
     </body>
 </html>
-
-commit avec le git add --all

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>GBAF | Formation_CO</title>
+        <title>GBAF | Formation&Co</title>
 	<link href="style.css" rel="stylesheet" /> 
     </head>
         
