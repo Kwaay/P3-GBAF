@@ -216,6 +216,84 @@
     text-align: center;
 }
 
+/* <--Page Acteur : Protect People--> */
+
+.acteur-protect-people {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid red; 
+    margin-bottom: 1vh;  
+}
+.text-protectpeople-acteurs h2 {
+    margin-left: 2vh;
+}
+.text-protectpeople-acteurs p {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 2vh;
+    width: 100%;
+    max-width:700px;
+    margin-left: 2vh;
+}
+.img-partenaires{    
+    text-align: center;
+}
+
+/* <--Page Acteur : DSA France--> */
+
+.acteur-dsa-france {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid red; 
+    margin-bottom: 1vh;  
+}
+.text-dsa-france-acteurs h2 {
+    margin-left: 2vh;
+}
+.text-dsa-france-acteurs p {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 2vh;
+    width: 100%;
+    max-width:700px;
+    margin-left: 2vh;
+}
+.img-partenaires{    
+    text-align: center;
+}
+
+/* <--Page Acteur : CDE--> */
+
+.acteur-cde {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid red; 
+    margin-bottom: 1vh;  
+}
+.text-cde-acteurs h2 {
+    margin-left: 2vh;
+}
+.text-cde-acteurs p {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 2vh;
+    width: 100%;
+    max-width:700px;
+    margin-left: 2vh;
+}
+.img-partenaires{    
+    text-align: center;
+}
+
 /* <-- Menu Commentaires--> */
 
 .commentaires {
@@ -224,6 +302,7 @@
     width: 100%;
     max-width:1500px;
     margin: 0 auto;
+    margin-bottom: 1vh;
 } 
 
 .menu-commentaires {
@@ -295,9 +374,10 @@
     max-width: 500px;
     margin: 0 auto;
     background-color: #a6a6a6;
-    border: 2px solid black;
+    border: 1px solid black;
     box-shadow: 1px 1px 10px 5px;
     margin-top: 5vh;
+    margin-bottom: 1vh;
 }
 .connexion_form label {
     display: inline-block;
