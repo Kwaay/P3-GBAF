@@ -1,24 +1,20 @@
 
 /* <--Header--> */
 
-.header figure {
-    border-bottom: 3px solid #FF0000;
-    
+.header {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
-.header figure p {
-    float:right;
-    text-align:center;
-    font-size: xx-large;
-    position: relative;
-}
-
 /* <--Présentation GBAF--> */
 
 .texte-gbaf {
     text-align: center;
     margin: 0 auto;
     margin-top: 5vh;
-    border: 2px solid #FF0000;
+    border-top: 2px solid #FF0000;
+    border-bottom: 2px solid #FF0000;
     width: 100%;
     max-width: 1500px;
 }
@@ -40,7 +36,6 @@
     margin-top: 5vh;
     width: 100%;
     max-width: 1500px;
-    border: 2px solid red;
 }
 .texte-partenaires p {
     width: 100%;
@@ -56,6 +51,16 @@
     color: red;
 }
 
+/* <--Partenaires--> */
+
+.partenaires {
+    border: 2px solid red;
+    max-width: 1500px;
+    width: 100%;
+    padding: 2vh;
+    margin: 0 auto;
+}
+
 /* <--Partenaire Formation&Co--> */
 
 .partenaire-formation-co {
@@ -63,13 +68,13 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 2px solid red;
+    border: 1px solid red;
     display:flex;
     align-items: center;
 }
 .partenaire-formation-co p {
     width: 100%;
-    max-width: 700px;
+    max-width: 1100px;
     text-align: left;
     margin-left: 2vh;
     display: inline-block;
@@ -87,13 +92,13 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1500px; 
-    border: 2px solid red;
+    border: 1px solid red;
     display:flex;
     align-items: center;
 }
 .partenaire-protect-people p {
     width: 100%;
-    max-width: 750px;
+    max-width: 1100px;
     text-align: left;
     margin-left: 2vh;
     display: inline-block;
@@ -111,13 +116,13 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 2px solid red;
+    border: 1px solid red;
     display:flex;
     align-items: center;
 }
 .partenaire-dsa-france p {
     width: 100%;
-    max-width: 750px;
+    max-width: 1100px;
     text-align: left;
     margin-left: 2vh;
     display: inline-block;
@@ -135,13 +140,13 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 2px solid red;
+    border: 1px solid red;
     display:flex;
     align-items: center;
 }
 .partenaire-cde p {
     width: 100%;
-    max-width: 750px;
+    max-width: 1100px;
     text-align: left;
     margin-left: 2vh;
     display: inline-block;
@@ -156,39 +161,51 @@
 
 .button-formation-co {
     border: 2px solid red;
+    border-radius: 30px;
     box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
     padding: 0.5vh;
     margin-left: auto;
     margin-top:auto;
     margin-bottom: 2vh;
     margin-right: 2vh;
+    display: inline-block;
+    float: right;
 }
 .button-protect-people {
     border: 2px solid red;
+    border-radius: 30px;
     box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
     padding: 0.5vh;
     margin-left: auto;
     margin-top:auto;
     margin-bottom: 2vh;
     margin-right: 2vh;
+    display: inline-block;
+    float: right;
 }
 .button-dsa-france {
     border: 2px solid red;
+    border-radius: 30px;
     box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
     padding: 0.5vh;
     margin-left: auto;
     margin-top:auto;
     margin-bottom: 2vh;
     margin-right: 2vh;
+    display: inline-block;
+    float: right;
 }
 .button-cde {
     border: 2px solid red;
+    border-radius: 30px;
     box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
     padding: 0.5vh;
     margin-left: auto;
     margin-top:auto;
     margin-bottom: 2vh;
     margin-right: 2vh;
+    display: inline-block;
+    float: right;
 }
 /* <--Page Acteur : Formation & Co--> */
 
@@ -468,4 +485,97 @@ a:active {
     color: white!important;
     text-decoration: none;
     text-decoration-line: none;
+}
+
+@media screen and (min-width:750px) and (max-width:1100px) {
+    .header img {
+        height: 15%;
+        width: 15%;
+    }
+    .logo-groupes img {
+        height: 15%;
+        width: 15%;
+    }
+    .partenaires img {
+        height: 30%;
+        width: 30%;
+    }
+    .text-container {
+        padding: 2vh;
+    }
+
+@media screen and (min-width: 0px) and (max-width:749px) {
+    
+    body {
+        margin: 0 auto;
+    }
+    .header img {
+        height: 15%;
+        width: 15%;
+    }
+    .logo-groupes img {
+        height: 10%;
+        width: 10%;
+    }
+    .partenaires {
+        padding: 2vh;
+    }
+    .partenaire-formation-co {
+        display: inline-block;
+        width: 100%;
+        max-width: 750px;
+    }
+    .partenaire-formation-co img {
+       display: inline-block;
+       padding-top: 2vh;
+    }
+    .button-formation-co {
+        display: inline-flex;
+        float: right;
+    }
+    .text-container {
+        margin-right: 2vh;
+    }
+    .partenaire-protect-people {
+        display: inline-block;
+        width: 100%;
+        max-width: 750px;
+        margin-top: 2vh;
+    }
+    .partenaire-protect-people img {
+        display: inline-block;
+        padding-top: 2vh;
+    }
+    .button-protect-people {
+        display: inline-block;
+        float: right;
+    }
+    .partenaire-dsa-france {
+        display: inline-block;
+        width: 100%;
+        max-width: 750px;
+        margin-top: 2vh;
+    }
+    .partenaire-dsa-france img {
+        display: inline-block;
+        padding-top: 2vh;
+    }
+    .button-dsa-france {
+        display: inline-block;
+        float: right;
+    }
+    .partenaire-cde {
+        display: inline-block;
+        width: 100%;
+        max-width: 750px;
+        margin-top: 2vh;
+    }
+    .partenaire-cde img {
+        display: inline-block;
+        padding-top: 2vh;
+    }
+    .button-cde {
+        display: inline-block;
+        float: right;
+    }
 }

@@ -26,14 +26,15 @@
         </section>
 
             <div class="texte-partenaires">
-            <h2><u>Les Partenaires et Acteurs</u></h2>
-            <p>Les produits et services bancaires sont nombreux et très variés. 
-            Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.)
-            recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.
-            </p>
+                <h2><u>Les Partenaires et Acteurs</u></h2>
+                <p>Les produits et services bancaires sont nombreux et très variés. 
+                Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.)
+                recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.
+                </p>
+                </div>
+                <br>
             </div>
-            <br>
-        </div>
+    <div class="partenaires">
         <div class="partenaire-formation-co">
             <img src="images/formation_co.png" alt="Logo de Formation&Co" height=150 width=300/>
             <div class="text-container">
@@ -47,10 +48,11 @@
 
                 Le financement est possible, peu importe le métier : coiffeur, banquier, éleveur de chèvres… . Nous collaborons avec des personnes talentueuses et motivées.
                 Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous. </p>
-            </div>
             <div class="button-formation-co">
                 <a href="formation_co.php" class="link-button">Lire la suite</a>
             </div>
+        </div>
+            
         </div>
        <br>
         <div class="partenaire-protect-people">
@@ -67,10 +69,11 @@
                 Notre mission est double :
                 • sociale : nous garantissons la fiabilité des données sociales ;
                 • économique : nous apportons une contribution aux activités économiques.</p>
-            </div>
             <div class="button-protect-people">
                 <a href="protectpeople.php" class="link-button">Lire la suite</a>
             </div>
+        </div>
+            
         </div>
         <br>
         <div class="partenaire-dsa-france">
@@ -82,10 +85,11 @@
                 Notre philosophie : s’adapter à chaque entreprise.
                 Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
                 </p>
-            </div>
             <div class="button-dsa-france">
                 <a href="dsa_france.php" class="link-button">Lire la suite</a>
             </div>
+        </div>
+            
         </div>
         <br>
         <div class="partenaire-cde">
@@ -94,12 +98,14 @@
                 <h3><u>CDE</u></h3>
                 <p> La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
                 Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.</p>
-            </div>
             <div class="button-cde">
                 <a href="cde.php" class="link-button">Lire la suite</a>
             </div>
+        </div>
+            
             
         </div>
+    </div>
         <br>
         <?php include ("footer.php"); ?> 
     </body>
