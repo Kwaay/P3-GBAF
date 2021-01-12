@@ -223,8 +223,6 @@
 }
 .text-formation-co-acteurs p {
     display: inline-flex;
-    vertical-align: middle;
-    line-height: 2vh;
     width: 100%;
     max-width:700px;
     margin-left: 2vh;
@@ -249,8 +247,6 @@
 }
 .text-protectpeople-acteurs p {
     display: inline-flex;
-    vertical-align: middle;
-    line-height: 2vh;
     width: 100%;
     max-width:700px;
     margin-left: 2vh;
@@ -275,8 +271,6 @@
 }
 .text-dsa-france-acteurs p {
     display: inline-flex;
-    vertical-align: middle;
-    line-height: 2vh;
     width: 100%;
     max-width:700px;
     margin-left: 2vh;
@@ -301,8 +295,6 @@
 }
 .text-cde-acteurs p {
     display: inline-flex;
-    vertical-align: middle;
-    line-height: 2vh;
     width: 100%;
     max-width:700px;
     margin-left: 2vh;
@@ -392,9 +384,9 @@
     margin: 0 auto;
     background-color: #a6a6a6;
     border: 1px solid black;
-    box-shadow: 1px 1px 10px 5px;
     margin-top: 5vh;
     margin-bottom: 1vh;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #a6a6a6;
 }
 .connexion_form label {
     display: inline-block;
@@ -503,7 +495,23 @@ a:active {
     .text-container {
         padding: 2vh;
     }
-
+    .img-partenaires img {
+        width: 75%;
+        height: 75%;
+    }
+    .text-formation-co-acteurs p {
+        width: 90%;
+    }
+    .text-protectpeople-acteurs p {
+        width: 90%;
+    }
+    .text-dsa-france-acteurs p {
+        width: 90%;
+    }
+    .text-cde-acteurs p {
+        width: 90%;
+    }
+}
 @media screen and (min-width: 0px) and (max-width:749px) {
     
     body {
@@ -577,5 +585,21 @@ a:active {
     .button-cde {
         display: inline-block;
         float: right;
+    }
+    .img-partenaires img {
+        width: 75%;
+        height: 75%;
+    }
+    .text-formation-co-acteurs p {
+        width: 90%;
+    }
+    .text-protectpeople-acteurs p {
+        width: 90%;
+    }
+    .text-dsa-france-acteurs p {
+        width: 90%;
+    }
+    .text-cde-acteurs p {
+        width: 90%;
     }
 }
