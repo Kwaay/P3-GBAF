@@ -7,35 +7,36 @@
     </head>
         
     <body>
-    <?php include "header.php" ?>
+        <?php include "header.php" ?>
     <?php
         require('config.php');
-        if (isset($_REQUEST['nom'], $_REQUEST['prenom'], $_REQUEST['username'], $_REQUEST['password'], $_REQUEST['question'], $_REQUEST['reponse'])){
-        // récupérer la donnée et supprimer les antislashes ajoutés par le formulaire
-            $nom = stripslashes($_REQUEST['nom']);
-            $nom = mysqli_real_escape_string($conn, $nom); 
-            $prenom = stripslashes($_REQUEST['prenom']);
-            $prenom = mysqli_real_escape_string($conn, $prenom); 
-            $username = stripslashes($_REQUEST['username']);
-            $username = mysqli_real_escape_string($conn, $username); 
-            $password = stripslashes($_REQUEST['password']);
-            $password = mysqli_real_escape_string($conn, $password);
-            $question = stripslashes($_REQUEST['question']);
-            $question = mysqli_real_escape_string($conn, $question);
-            $reponse = stripslashes($_REQUEST['reponse']);
-            $reponse = mysqli_real_escape_string($conn, $reponse);
+        if (isset($_POST['nom'], $_POST['prenom'], $_POST['username'], $_POST['password'], $_POST['question'], $_POST['reponse'])) {
+            // récupérer la donnée et supprimer les antislashes ajoutés par le formulaire
+            $nom = stripslashes($_POST['nom']);
+            $nom = mysqli_real_escape_string($bdd, $nom); 
+            $prenom = stripslashes($_POST['prenom']);
+            $prenom = mysqli_real_escape_string($bdd, $prenom); 
+            $username = stripslashes($_POST['username']);
+            $username = mysqli_real_escape_string($bdd, $username); 
+            $password = stripslashes($_POST['password']);
+            $password = mysqli_real_escape_string($bdd, $password);
+            $question = stripslashes($_POST['question']);
+            $question = mysqli_real_escape_string($bdd, $question);
+            $reponse = stripslashes($_POST['reponse']);
+            $reponse = mysqli_real_escape_string($bdd, $reponse);
             //requéte SQL + mot de passe crypté
-                $query = "INSERT into `users` (nom, prenom, username, password, question, reponse)
-                        VALUES ('$username', '".hash('sha256', $password)."')";
+            $query = "INSERT into `users` (nom, prenom, username, password, question, reponse)
+                      VALUES ('$nom','$prenom','$username', '".hash('sha256', $password)."','$question','$reponse')";
             // Exécuter la requête sur la base de données
-                $res = mysqli_query($conn, $query);
-                if($res){
+            $res = mysqli_query($bdd, $query);
+            if($res){
                 echo "<div class='success'>
                         <h3>Vous êtes inscrit avec succès.</h3>
-                        <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
-                    </div>";
-                }
-        ?>
+                        <p>Cliquez ici pour vous <a href='connexion.php'>connecter</a></p>
+                      </div>";
+            }
+        }
+    ?>
 
         <div class="inscription_form">
             <h3><u>Inscription à l'Extranet</u></h3>
@@ -51,8 +52,8 @@
                 </div> 
                 <br>      
                 <div>
-                    <label for="pseudo"><u>Pseudonyme :</u></label>
-                    <input type="text" id="pseudo" required name="pseudo">
+                    <label for="username"><u>Pseudonyme :</u></label>
+                    <input type="text" id="username" required name="username">
                 </div>
                 <br>
                 <div>
@@ -76,6 +77,7 @@
             <br>
             <p>Vous voulez vous connecter ? <a href="connexion.php" class="link-button">Se connecter</a></p>
             <br>
-    <?php include ("footer.php"); ?>
+        </div>
+        <?php include ("footer.php"); ?>
     </body>
 </html>

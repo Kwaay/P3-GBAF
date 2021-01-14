@@ -1,15 +1,7 @@
 <?php
-// Informations d'identification
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'p3');
- 
-// Connexion à la base de données MySQL 
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- 
-// Vérifier la connexion
-if($conn === false){
-    die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
+try {
+	$bdd = new PDO('mysql:host=localhost;dbname=p3;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 }
-?>
+catch (Exception $e) {
+	die('Erreur : ' . $e->getMessage());
+}
