@@ -7,6 +7,13 @@
     $requete->execute();
     $reponse=$requete->fetch(PDO::FETCH_ASSOC);
     
+    $commentaires = $bdd -> prepare("SELECT COUNT(*) AS nb_com  FROM post");
+    $commentaires -> execute(array($_GET ['id']));
+    $donnees = $commentaires -> fetch();
+    
+    $retourcom = $bdd -> prepare("SELECT * FROM post");
+
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +40,10 @@
         <div class="commentaires">
             <div class="menu-commentaires">
                 <div class="profil-commentaires">
-                    <h1> X commentaires </h1>
+                    <h1> 
+                      <?php echo $donnees['nb_com']; ?> commentaire(s) 
+                    </h1>
+    
                 </div>    
                     <div class="bouton-commentaire">
                         <a href="commentaires.php" class="link-button">Nouveau<br />commentaire</a>
@@ -45,23 +55,23 @@
             </div>
                 <div class="first-commentaire">
                     <p>
-                    Prénom <br>
-                    Date <br>
-                    Texte <br>
+                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
                     </p>
                 </div>
                 <div class="second-commentaire">
                     <p>
-                    Prénom <br>
-                    Date <br>
-                    Texte <br>
+                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
                     </p>
                 </div>
                 <div class="third-commentaire">
                     <p>
-                    Prénom <br>
-                    Date <br>
-                    Texte <br>
+                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
+                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
                     </p>
                 </div>
                 </div>
