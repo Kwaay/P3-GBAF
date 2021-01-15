@@ -349,24 +349,15 @@
 
 /* <--Commentaires--> */
 
-.first-commentaire {
+.info-commentaires {
     border: 1px solid red;
     border-radius: 10px;
     padding: 1vh;
     margin: 1vh;
 }
-.second-commentaire {
-    border: 1px solid red;
-    border-radius: 10px;
-    padding: 1vh;
-    margin: 1vh;
+.pseudo_com {
+    
 }
-.third-commentaire {
-    border: 1px solid red;
-    border-radius: 10px;
-    padding: 1vh;
-    margin: 1vh;
-} 
 
 /* <--Formulaire de Connexion--> */
 

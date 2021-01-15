@@ -2,17 +2,22 @@
     session_start();
     require ('config.php');
     $id_acteur=$_GET['id'];
-    $requete = $bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
+    $id_user=$_
+    $requete=$bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
     $requete->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
     $requete->execute();
     $reponse=$requete->fetch(PDO::FETCH_ASSOC);
     
-    $commentaires = $bdd -> prepare("SELECT COUNT(*) AS nb_com  FROM post");
-    $commentaires -> execute(array($_GET ['id']));
-    $donnees = $commentaires -> fetch();
+    $commentaires=$bdd->prepare("SELECT COUNT(*) AS nb_com  FROM post");
+    $commentaires->execute(array($id_acteur));
+    $donnees=$commentaires->fetch();
     
-    $retourcom = $bdd -> prepare("SELECT * FROM post");
+    $retourcom=$bdd->prepare("SELECT * FROM post");
+    $retourcom->execute(array($id_acteur));
 
+    $getusername=$bdd->prepare("SELECT prenom FROM users WHERE id_user=?");
+    $getusername->execute(array($id_user));
+    
     
 ?>
 <!DOCTYPE html>
@@ -53,30 +58,29 @@
                         <i class="fa fa-thumbs-down"></i>
                         </div>
             </div>
-                <div class="first-commentaire">
-                    <p>
-                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
-                    </p>
-                </div>
-                <div class="second-commentaire">
-                    <p>
-                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
-                    </p>
-                </div>
-                <div class="third-commentaire">
-                    <p>
-                    <?php echo htmlspecialchars ($retourcom['id_user']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['date_add']) ?> <br>
-                    <?php echo htmlspecialchars ($retourcom['post']) ?> <br>
-                    </p>
-                </div>
+                    <?php 
+                        while ($com2=$retourcom->fetch()) { ?>
+                    <div class="info-commentaires">
+                        <div class="pseudo_com">
+                        <?php 
+                            echo htmlspecialchars($com2['id_user']); ?>
+                        </div>
+                        <div class="date_com">
+                        <?php
+                            echo htmlspecialchars($com2['date_add']); ?>
+                        </div>
+                        <div class="text-com">
+                        <?php
+                            echo htmlspecialchars($com2['post']); ?>
+                        </div>
+                    </div>   
+                    <?php 
+                        }
+                        $retourcom->closeCursor();
+                    ?>
                 </div>
             </div>
         </div>
-        <?php include ("footer.php") ?>
+        <?php include ("footer.php"); ?>
     </body>
 </html>

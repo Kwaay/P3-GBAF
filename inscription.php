@@ -12,24 +12,18 @@
         require('config.php');
         if (isset($_POST['nom'], $_POST['prenom'], $_POST['username'], $_POST['password'], $_POST['question'], $_POST['reponse'])) {
             // récupérer la donnée et supprimer les antislashes ajoutés par le formulaire
-            $nom = stripslashes($_POST['nom']);
-            $nom = mysqli_real_escape_string($bdd, $nom); 
-            $prenom = stripslashes($_POST['prenom']);
-            $prenom = mysqli_real_escape_string($bdd, $prenom); 
-            $username = stripslashes($_POST['username']);
-            $username = mysqli_real_escape_string($bdd, $username); 
-            $password = stripslashes($_POST['password']);
-            $password = mysqli_real_escape_string($bdd, $password);
-            $question = stripslashes($_POST['question']);
-            $question = mysqli_real_escape_string($bdd, $question);
-            $reponse = stripslashes($_POST['reponse']);
-            $reponse = mysqli_real_escape_string($bdd, $reponse);
-            //requéte SQL + mot de passe crypté
-            $query = "INSERT into `users` (nom, prenom, username, password, question, reponse)
-                      VALUES ('$nom','$prenom','$username', '".hash('sha256', $password)."','$question','$reponse')";
+            $nom=htmlspecialchars($_POST['nom']);
+            $prenom=htmlspecialchars($_POST['prenom']);
+            $username=htmlspecialchars($_POST['username']);
+            $password=htmlspecialchars($_POST['password']);
+            $question=htmlspecialchars($_POST['question']);
+            $reponse=htmlspecialchars($_POST['reponse']);
+       //requéte SQL + mot de passe crypté
+            $query=$bdd->prepare('INSERT into `users` (nom, prenom, username, password, question, reponse)
+                      VALUES (:nom,:prenom,:username,:password,:question,:reponse)');
+            $query->execute(array('nom' => $nom, 'prenom' => $prenom, 'username' => $username, 'password' => $password, 'question' => $question,'reponse' => $reponse));
             // Exécuter la requête sur la base de données
-            $res = mysqli_query($bdd, $query);
-            if($res){
+            if($query){
                 echo "<div class='success'>
                         <h3>Vous êtes inscrit avec succès.</h3>
                         <p>Cliquez ici pour vous <a href='connexion.php'>connecter</a></p>

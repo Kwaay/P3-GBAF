@@ -10,21 +10,12 @@
         <?php include ("header.php") ?>
         <?php
             require('config.php');
-            session_start();
             if (isset($_POST['username'], $_POST['password'])){
-                $username = stripslashes($_POST['username']);
-                $username = mysqli_real_escape_string($bdd, $username);
-                $password = stripslashes($_POST['password']);
-                $password = mysqli_real_escape_string($bdd, $password);
-                $query = "SELECT * FROM `users` WHERE username='$username' and password='".hash('sha256', $password)."'";
-                $result = mysqli_query($bdd,$query) or die(mysql_error());
-                $rows = mysqli_num_rows($result);
-                if($rows==1){
-                    $_SESSION['username'] = $username;
-                    header("Location: index.php");
-                }else{
-                    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
-                }
+                $username=htmlspecialchars($_POST['username']);
+                $password=htmlspecialchars($_POST['password']);
+                $query=$bdd->prepare("SELECT username,password FROM `users` WHERE username=:username");
+                $query->execute();
+          
             }
         ?>
 
