@@ -2,7 +2,6 @@
     session_start();
     require ('config.php');
     $id_acteur=$_GET['id'];
-    $id_user=$_
     $requete=$bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
     $requete->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
     $requete->execute();
@@ -15,10 +14,9 @@
     $retourcom=$bdd->prepare("SELECT * FROM post");
     $retourcom->execute(array($id_acteur));
 
-    $getusername=$bdd->prepare("SELECT prenom FROM users WHERE id_user=?");
-    $getusername->execute(array($id_user));
-    
-    
+    //$getprenom=$bdd->prepare("SELECT prenom FROM users WHERE id_user=prenom");
+    //$getprenom->execute(array());
+   
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,19 +57,19 @@
                         </div>
             </div>
                     <?php 
-                        while ($com2=$retourcom->fetch()) { ?>
+                        while ($infocom=$retourcom->fetch()) { ?>
                     <div class="info-commentaires">
                         <div class="pseudo_com">
                         <?php 
-                            echo htmlspecialchars($com2['id_user']); ?>
+                            echo htmlspecialchars($infocom['id_user']); ?>
                         </div>
                         <div class="date_com">
                         <?php
-                            echo htmlspecialchars($com2['date_add']); ?>
+                            echo htmlspecialchars($infocom['date_add']); ?>
                         </div>
                         <div class="text-com">
                         <?php
-                            echo htmlspecialchars($com2['post']); ?>
+                            echo htmlspecialchars($infocom['post']); ?>
                         </div>
                     </div>   
                     <?php 
