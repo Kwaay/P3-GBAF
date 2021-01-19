@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,12 +14,34 @@
         <?php include ("header.php") ?>
         <?php
             require('config.php');
-            if (isset($_POST['username'], $_POST['password'])){
-                $username=htmlspecialchars($_POST['username']);
-                $password=htmlspecialchars($_POST['password']);
-                $query=$bdd->prepare("SELECT username,password FROM `users` WHERE username=:username");
-                $query->execute();
+            if (isset($_POST['username'], $_POST['password']))
+            {
+                $username = htmlspecialchars($_POST['username']);
+                $password = sha1($_POST['password']);
+                if(!empty('username') AND !empty('password'))
+                {
+                    $req = $bdd->prepare("SELECT (username,password) FROM `users` WHERE username = ? AND password = ?");
+                    $req->execute(array($username,$password));
+                    $userexist = $req->rowCount();
+                    if($userexist == 1)
+                    {
+                        $userinfo = $req-> fetch();
+                        $_SESSION['id'] = $userinfo['id'];
+                        $_SESSION['username'] = $userinfo['username'];
+                        $_SESSION['password'] = $userinfo['password'];
+                        header("Location: profil.php?id=".$_SESSION['id'])
+                    }
+                    else
+                    {
+                        $erreur = "Mauvais identifiants";
+                    }
           
+                }
+                else 
+                {
+                    $erreur = "Tous les champs doivent être complétés";
+                }
+                
             }
         ?>
 
@@ -24,16 +50,18 @@
             <form method="POST">
                 <div class="form_pseudo">
                     <label for="pseudo"><u>Pseudonyme :</u></label>
-                    <input type="text" id="pseudo" required name="pseudo">
+                    <input type="text" id="pseudo" placeholder="Votre pseudo">
                 </div>
                 <br>
                 <div class="form_password">
                     <label for="password"><u>Mot de passe :</u></label>
-                    <input type="password" id="password" required name="password">
+                    <input type="password" id="password" placeholder="Votre mot de passe">
                 </div>
                 <br>
-
-                <button type="submit">Se connecter</button>
+                <div class="form_submit">
+                    <input type="submit" id="password" value="Se connecter">
+                </div>
+               
             </form>
             <br>
             <p>Pas encore inscrit ? <a href="inscription.php" class="link-button">S'inscrire</a></p>

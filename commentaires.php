@@ -3,9 +3,10 @@
     if (isset($_POST['post'])) {
        $post=htmlspecialchars($_POST['post']);
     }
-    $query=$bdd->prepare('INSERT into `post` VALUES (:post)');
-    $query->execute(array('post' => $post));
+    $query=$bdd->prepare('INSERT into `post` VALUES "?"');
+    $query->execute(array($post));
     $addpost=$query->fetch(PDO::PARAM_ASSOC);
+    $post = 'post';
 ?>
 
 <!DOCTYPE html>

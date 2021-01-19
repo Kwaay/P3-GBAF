@@ -373,9 +373,10 @@
     margin: 0 auto;
     background-color: #a6a6a6;
     border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px 1px rgba(166,166,166,1);
     margin-top: 5vh;
     margin-bottom: 1vh;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px #a6a6a6;
 }
 .connexion_form label {
     display: inline-block;
@@ -391,9 +392,11 @@
     max-width: 500px;
     margin: 0 auto;
     background-color: #a6a6a6;
-    border: 2px solid black;
-    box-shadow: 1px 1px 10px 5px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px 1px rgba(166,166,166,1);
     margin-top: 5vh;
+    margin-bottom: 2vh;
    
 }
 .inscription_form h3 {
@@ -444,6 +447,7 @@ a:active {
     color:#FFF;
     text-align:center;
     padding:0.5vh;
+    margin-top: 2vh
 ;
 
 
@@ -591,4 +595,14 @@ a:active {
     .text-cde-acteurs p {
         width: 90%;
     }
+}
+
+.success {
+    text-align:center;
+    display: block;
+    padding:2vh;
+    border: 1px solid red;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
 }
