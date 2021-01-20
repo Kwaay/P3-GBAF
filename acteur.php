@@ -6,17 +6,26 @@
     $requete->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
     $requete->execute();
     $reponse=$requete->fetch(PDO::FETCH_ASSOC);
-    
+
+    // Nombre de commentaires //
     $commentaires=$bdd->prepare("SELECT COUNT(*) AS nb_com  FROM post");
     $commentaires->execute(array($id_acteur));
     $donnees=$commentaires->fetch();
     
+    // information commentaires //
     $retourcom=$bdd->prepare("SELECT * FROM post");
     $retourcom->execute(array($id_acteur));
 
-    //$getprenom=$bdd->prepare("SELECT prenom FROM users WHERE id_user=prenom");
-    //$getprenom->execute(array());
+    //$getprenom=$bdd->prepare("SELECT prenom FROM users WHERE prenom= ? ");
+    //$getprenom->execute(array(':prenom'));
    
+    /*$likes =$bdd->prepare('SELECT COUNT(vote = 1) FROM votes')
+    $likes->execute(array($id_acteur));
+    $likes = $likes->rowCount();
+
+    $dislikes =$bdd->prepare('SELECT COUNT(vote = 1) FROM votes')
+    $dislikes->execute(array($id_acteur));
+    $dislikes = $dislikes->rowCount();*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,8 +61,8 @@
                         <a href="commentaires.php" class="link-button">Nouveau<br />commentaire</a>
                     </div>
                         <div class="bouton-like-dislike">
-                        <i class="fa fa-thumbs-up">5</i>
-                        <i class="fa fa-thumbs-down"></i>
+                        <a href="vote.php?t=1&id=<?= $id_acteur ?>" <i class="fa fa-thumbs-up"> <?= $likes ?></i>
+                        <a href="vote.php?t=2&id=<?= $id_acteur ?>" <i class="fa fa-thumbs-down"><?= $dislikes ?></i>
                         </div>
             </div>
                     <?php 

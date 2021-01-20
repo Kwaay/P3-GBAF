@@ -1,12 +1,14 @@
 <?php 
     require ("config.php");
     if (isset($_POST['post'])) {
-       $post=htmlspecialchars($_POST['post']);
+
+        $post=htmlspecialchars($_POST['post']);
+        $query=$bdd->prepare('INSERT into post VALUES ?');
+        $query->execute(array($post));
+        $addpost=$query->fetch(PDO::PARAM_ASSOC);
+        $post = 'post';
     }
-    $query=$bdd->prepare('INSERT into `post` VALUES "?"');
-    $query->execute(array($post));
-    $addpost=$query->fetch(PDO::PARAM_ASSOC);
-    $post = 'post';
+    
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@
         
     <body>
         <?php include ('header.php'); ?>
-        <div class="commentaires_form">
+        <div class="commentaires_form" align="center">
             <h3><u>Créer un commentaire</u></h3>
             <form method="POST">
                 <div>
