@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require ('config.php');
     $id_acteur=$_GET['id'];
     $requete=$bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
@@ -16,16 +15,7 @@
     $retourcom=$bdd->prepare("SELECT * FROM post");
     $retourcom->execute(array($id_acteur));
 
-    //$getprenom=$bdd->prepare("SELECT prenom FROM users WHERE prenom= ? ");
-    //$getprenom->execute(array(':prenom'));
-   
-    /*$likes =$bdd->prepare('SELECT COUNT(vote = 1) FROM votes')
-    $likes->execute(array($id_acteur));
-    $likes = $likes->rowCount();
 
-    $dislikes =$bdd->prepare('SELECT COUNT(vote = 1) FROM votes')
-    $dislikes->execute(array($id_acteur));
-    $dislikes = $dislikes->rowCount();*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +27,10 @@
     </head>
         
     <body>
-        <?php include ("header.php"); ?>
+        <?php
+            include ("header.php");
+        ?>
+      
         <div class="acteur-formation-co">
             <div class="img-partenaires">
                 <img src="images/<?php echo htmlspecialchars ($reponse['logo']) ?>" alt="Logo du <?php echo htmlspecialchars ($reponse['acteur']) ?>" height=300  width=600 />
@@ -61,8 +54,10 @@
                         <a href="commentaires.php" class="link-button">Nouveau<br />commentaire</a>
                     </div>
                         <div class="bouton-like-dislike">
-                        <a href="vote.php?t=1&id=<?= $id_acteur ?>" <i class="fa fa-thumbs-up"> <?= $likes ?></i>
-                        <a href="vote.php?t=2&id=<?= $id_acteur ?>" <i class="fa fa-thumbs-down"><?= $dislikes ?></i>
+                        <a href="vote.php?t=1&id=<?= $id_acteur ?>" <?= $likes ?></i>
+                            <i class="fa fa-thumbs-up"> 
+                        <a href="vote.php?t=2&id=<?= $id_acteur ?>" <?= $dislikes ?></i>
+                            <i class="fa fa-thumbs-down">
                         </div>
             </div>
                     <?php 

@@ -1,4 +1,8 @@
 <?php 
+    session_start();
+?>
+
+<?php 
     require ("config.php");
     if (isset($_POST['post'])) {
 
@@ -26,7 +30,7 @@
             <form method="POST">
                 <div>
                     <label for="post"><u>Contenu du commentaire :</u><br>
-                        <input type="text" id="post">
+                       <input type="textarea" id="post">
                     </label>
                 </div>
                 <br>

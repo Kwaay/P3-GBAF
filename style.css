@@ -606,3 +606,22 @@ a:active {
     width: 100%;
     max-width: 500px;
 }
+.profil {
+    border: 2px solid red;
+    border-radius: 30px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2vh;
+}
+.profil-titre {
+    text-align:left;
+}
+.profil-text {
+    text-align: left;
+}
+.button-forgot {
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 0.5vh;
+}

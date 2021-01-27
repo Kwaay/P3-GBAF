@@ -1,12 +1,12 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>GBAF | Connexion</title>
+        <title>GBAF | Paramètres du compte</title>
 	<link href="style.css" rel="stylesheet" /> 
     </head>
         
@@ -16,31 +16,33 @@ session_start();
             require('config.php');
             if (isset($_GET['id']) AND $_GET['id'] > 0)
             {
-                echo "Ok";
-                $getid = intval($_GET['id']);
+                $getid = intval($_SESSION['id']);
                 $requser = $bdd->prepare('SELECT * FROM `users` WHERE id = ?');
                 $requser->execute(array($getid));
-                $userinfo = $requser->fetch(PDO::PARAM_ASSOC);
+                $userinfo = $requser->fetch();
             }
         ?>
-        <div class="profil">
-            <h2>Profil de <?php echo $userinfo['username']; ?></h2>
-            <p>
-            <br />
-            Nom = <?php echo $userinfo ['nom']; ?>
-            <br />
-            Prénom : <?php echo $userinfo ['prenom']; ?>
-            <br />
-            Username : <?php echo $userinfo ['username']; ?>
-            <br />
-            Password : <?php echo $userinfo ['password']; ?>
-            <br />
-            Question secrète : <?php echo $userinfo ['questions']; ?>
-            <br />
-            Réponse : <?php echo $userinfo ['reponse']; ?>
-            <br />
-            </p>
-
+        <div class="profil" align="center">
+            <div class="profil-titre">
+                <h2><u>Profil de <?php echo $userinfo['username']; ?></h2></u>
+                <div class="profil-text">
+                    <u><h3>Nom :</u> <?php echo $userinfo ['nom']; ?></h3>
+                
+                    <u><h3>Prénom :</u> <?php echo $userinfo ['prenom']; ?></h3>
+                
+                    <u><h3>Username :</u> <?php echo $userinfo ['username']; ?></h3>
+                
+                    <u><h3>Password :</u> <?php echo $userinfo ['password']; ?></h3>
+                        <div class="button-forgot" align="center">
+                            <a href="forgot.php" class="link-button"> Modifier </a>
+                        </div>
+                    <u><h3>Question secrète :</u> <?php echo $userinfo ['question']; ?></h3>
+                
+                    <u><h3>Réponse :</u> <?php echo $userinfo ['reponse']; ?></h3>
+                
+                </div>
+            </div>
+        </div>
         <?php include ("footer.php") ?>
     </body>
 </html>

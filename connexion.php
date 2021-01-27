@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ session_start();
                         $_SESSION['id'] = $userinfo['id'];
                         $_SESSION['username'] = $userinfo['username'];
                         $_SESSION['password'] = $userinfo['password'];
-                        header("Location: profil.php?id=".$_SESSION['id']);
+                        header("Location: profil.php?id=" . $_SESSION['id']);
                     }
                     else
                     {

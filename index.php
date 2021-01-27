@@ -1,17 +1,3 @@
-<?php
-  // Initialiser la session
-  session_start();
-  require ('config.php');
-  
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
-    if(!isset($_SESSION["username"])){
-   /*header("Location: connexion.php");
-    exit(); */
-    }
-
-    
- 
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +5,10 @@
         <title>GBAF | Accueil</title>
 	<link href="style.css" rel="stylesheet" /> 
     </head>
-     <?php include ("header.php"); ?> 
+     <?php 
+        include ("header.php");
+        require('config.php') 
+     ?> 
      
 
     <body>

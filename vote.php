@@ -5,8 +5,6 @@
         $getid = (int) $_GET['id'];
         $get_t = (int) $_GET['t'];
 
-        $sessionid = 4;
-
         /*$check = $bdd->prepare('SELECT id_acteur FROM vote WHERE id_acteur = ?');
         $check->execute(array($getid));
         var_dump($check->rowCount());
@@ -15,14 +13,14 @@
         { */
             if($get_t == 1)
             {
-                $like = $bdd->prepare('INSERT INTO vote (id_acteur, id_user, vote) VALUES (?, ?, 1)');
-                $like->execute(array($getid, $sessionid));
-                print_r($like->errorInfo());
+                $likes = $bdd->prepare('INSERT INTO vote (id_acteur, id_user, vote) VALUES (?, ?, 1)');
+                $likes->execute(array($getid, $_SESSION['id']));
+                print_r($likes->errorInfo());
             }
             elseif ($get_t == 2)
             {
-                $dislike = $bdd->prepare('INSERT INTO vote (id_acteur,id_user, vote) VALUES (?, ?, 2)');
-                $dislike->execute(array($getid, $sessionid));
+                $dislikes = $bdd->prepare('INSERT INTO vote (id_acteur, id_user, vote) VALUES (?, ?, 2)');
+                $dislikes->execute(array($getid, $_SESSION['id']));
             }
             header('Location: '.$_SERVER['HTTP_REFERER']);
             
