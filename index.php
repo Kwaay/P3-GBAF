@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,13 +8,23 @@
         <title>GBAF | Accueil</title>
 	<link href="style.css" rel="stylesheet" /> 
     </head>
-     <?php 
-        include ("header.php");
-        require('config.php');
-     ?> 
+     
      
 
     <body>
+        <?php 
+            include ("header.php");
+            require('config.php');
+            if(isset($_SESSION['username']) AND !empty($_SESSION['username']))
+            {
+                
+            }
+            else 
+            {
+                header('Location:connexion.php');
+            }
+        ?>
+
        <section class="presentation-gbaf">
             <div class="texte-gbaf">
                 <h1><u>Le Groupement Banque Assurance Français (GBAF)</u></h1> 

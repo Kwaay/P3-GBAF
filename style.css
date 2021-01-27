@@ -2,6 +2,7 @@ body {
     padding-bottom: 60px;
     min-height: 100vh;
     margin: 0;
+    position: relative;
 }
 /* <--Header--> */
 
@@ -67,6 +68,9 @@ body {
 
 .partenaires {
     border: 2px solid red;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     max-width: 1500px;
     width: 100%;
     padding: 2vh;
