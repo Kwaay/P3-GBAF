@@ -4,15 +4,19 @@
 
 <?php 
     require ("config.php");
-    if (isset($_POST['post'])) {
+    if (isset($_POST['post']) AND !empty($_POST['post'])) 
+    {
 
         $post=htmlspecialchars($_POST['post']);
-        $query=$bdd->prepare('INSERT into post VALUES ?');
-        $query->execute(array($post));
-        $addpost=$query->fetch(PDO::PARAM_ASSOC);
-        $post = 'post';
+        $query=$bdd->prepare('INSERT INTO post (post,id_user,date_add,id_acteur) VALUES (:post,:id_user,NOW(),:id_acteur)');
+        $query->bindParam(':post', $post, PDO::PARAM_STR_CHAR);
+        $query->bindParam(':id_user', $_SESSION['id'], PDO::PARAM_INT);
+        $query->bindParam(':id_acteur', $_GET['id_acteur'], PDO::PARAM_INT);
+        $query->execute();
+        header("Location:acteur.php?id=" . $_GET['id_acteur']);
+        
     }
-    
+ 
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +34,7 @@
             <form method="POST">
                 <div>
                     <label for="post"><u>Contenu du commentaire :</u><br>
-                       <input type="textarea" id="post">
+                       <input type="textarea" name="post" id="post" placeholder="Ecrivez ici">
                     </label>
                 </div>
                 <br>

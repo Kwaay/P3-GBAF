@@ -7,7 +7,7 @@
     </head>
      <?php 
         include ("header.php");
-        require('config.php') 
+        require('config.php');
      ?> 
      
 

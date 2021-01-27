@@ -1,4 +1,8 @@
-
+body {
+    padding-bottom: 60px;
+    min-height: 100vh;
+    margin: 0;
+}
 /* <--Header--> */
 
 .header {
@@ -7,6 +11,14 @@
     margin: 0 auto;
     text-align: center;
 }
+.headerconnecte {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2vh;
+}
+
 /* <--Présentation GBAF--> */
 
 .texte-gbaf {
@@ -75,7 +87,7 @@
 .partenaire-formation-co p {
     width: 100%;
     max-width: 1100px;
-    text-align: left;
+    text-align: center;
     margin-left: 2vh;
     display: inline-block;
     vertical-align: top;
@@ -220,15 +232,23 @@
 }
 .text-formation-co-acteurs h2 {
     margin-left: 2vh;
+    text-align: center;
 }
 .text-formation-co-acteurs p {
-    display: inline-flex;
     width: 100%;
-    max-width:700px;
+    max-width:1400px;
     margin-left: 2vh;
+    text-align: center;
 }
 .img-partenaires{    
     text-align: center;
+    padding-top: 1vh;
+}
+.img-partenaires img {
+    border: 1px solid #a6a6a6;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
 }
 
 /* <--Page Acteur : Protect People--> */
@@ -447,10 +467,11 @@ a:active {
     color:#FFF;
     text-align:center;
     padding:0.5vh;
-    margin-top: 2vh
-;
-
-
+    margin-top: 2vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .footer a {
     color: #FFF;

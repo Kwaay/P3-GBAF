@@ -22,7 +22,7 @@
                 if(!empty('username') AND !empty('password'))
                 {
                     echo "OK2";
-                    $req = $bdd->prepare("SELECT username,password FROM `users` WHERE username = ? AND password = ?");
+                    $req = $bdd->prepare("SELECT username,password,id FROM `users` WHERE username = ? AND password = ?");
                     $req->execute(array($username,$password));
                     $userexist = $req->rowCount();
                     if($userexist == 1)
@@ -32,7 +32,7 @@
                         $_SESSION['id'] = $userinfo['id'];
                         $_SESSION['username'] = $userinfo['username'];
                         $_SESSION['password'] = $userinfo['password'];
-                        header("Location: profil.php?id=" . $_SESSION['id']);
+                        header("Location: profil.php");
                     }
                     else
                     {

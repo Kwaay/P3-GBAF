@@ -14,13 +14,10 @@
         <?php include ("header.php") ?>
         <?php
             require('config.php');
-            if (isset($_GET['id']) AND $_GET['id'] > 0)
-            {
                 $getid = intval($_SESSION['id']);
                 $requser = $bdd->prepare('SELECT * FROM `users` WHERE id = ?');
                 $requser->execute(array($getid));
                 $userinfo = $requser->fetch();
-            }
         ?>
         <div class="profil" align="center">
             <div class="profil-titre">

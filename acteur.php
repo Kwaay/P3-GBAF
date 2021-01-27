@@ -1,4 +1,7 @@
 <?php
+    session_start();
+?>
+<?php
     require ('config.php');
     $id_acteur=$_GET['id'];
     $requete=$bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
@@ -15,6 +18,20 @@
     $retourcom=$bdd->prepare("SELECT * FROM post");
     $retourcom->execute(array($id_acteur));
 
+    $likesreq=$bdd->prepare("SELECT COUNT(*) AS nb_likes FROM vote WHERE vote=1 AND id_acteur=:id_acteur");
+    $likesreq->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
+    $likesreq->execute();
+    $likes=$likesreq->fetch(PDO::FETCH_ASSOC);
+
+    $dislikesreq=$bdd->prepare("SELECT COUNT(*) AS nb_dislikes FROM vote WHERE vote=2 AND id_acteur=:id_acteur");
+    $dislikesreq->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
+    $dislikesreq->execute();
+    $dislikes=$dislikesreq->fetch();
+
+    $date=date('d/m/Y');
+
+
+    
 
 ?>
 <!DOCTYPE html>
@@ -51,13 +68,13 @@
     
                 </div>    
                     <div class="bouton-commentaire">
-                        <a href="commentaires.php" class="link-button">Nouveau<br />commentaire</a>
+                        <a href="commentaires.php?id_acteur=<?=$id_acteur ?>" class="link-button">Nouveau<br />commentaire</a>
                     </div>
                         <div class="bouton-like-dislike">
-                        <a href="vote.php?t=1&id=<?= $id_acteur ?>" <?= $likes ?></i>
-                            <i class="fa fa-thumbs-up"> 
-                        <a href="vote.php?t=2&id=<?= $id_acteur ?>" <?= $dislikes ?></i>
-                            <i class="fa fa-thumbs-down">
+                        <a href="vote.php?t=1&id=<?= $id_acteur ?>"> <?= $likes['nb_likes']; ?></a>
+                            <i class="fa fa-thumbs-up"></i> 
+                        <a href="vote.php?t=2&id=<?= $id_acteur ?>"> <?= $dislikes['nb_dislikes']; ?></a>
+                            <i class="fa fa-thumbs-down"></i>
                         </div>
             </div>
                     <?php 
@@ -65,11 +82,16 @@
                     <div class="info-commentaires">
                         <div class="pseudo_com">
                         <?php 
-                            echo htmlspecialchars($infocom['id_user']); ?>
+                            $prenomcom=$bdd->prepare('SELECT prenom FROM users WHERE id=:id');
+                            $prenomcom->bindParam (':id', $infocom['id_user'] , PDO::PARAM_INT);
+                            $prenomcom->execute();
+                            $prenom=$prenomcom->fetch(PDO::FETCH_ASSOC);
+
+                            echo htmlspecialchars(ucfirst($prenom['prenom'])); ?>
                         </div>
                         <div class="date_com">
                         <?php
-                            echo htmlspecialchars($infocom['date_add']); ?>
+                            echo htmlspecialchars($date, strtotime($infocom['date_add'])); ?>
                         </div>
                         <div class="text-com">
                         <?php
