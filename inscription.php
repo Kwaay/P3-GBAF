@@ -10,13 +10,10 @@
         <?php include "header.php" ?>
         <?php
             require('config.php');
-            var_dump([$_POST['nom'], $_POST['prenom'], $_POST['username'], $_POST['password'], $_POST['question'], $_POST['reponse']]);
             if (isset($_POST['nom'], $_POST['prenom'], $_POST['username'], $_POST['password'], $_POST['question'], $_POST['reponse'])) 
             {
-                echo "test1";
                 if (!empty($_POST['nom'] AND !empty($_POST['prenom']) AND !empty($_POST['username']) AND !empty($_POST['password']) AND !empty($_POST['question'])) AND !empty($_POST['reponse']))
                 {
-                    echo "test2";
                     $nom = htmlspecialchars($_POST['nom']); 
                     $prenom = htmlspecialchars($_POST['prenom']);
                     $username = htmlspecialchars($_POST['username']); 
@@ -39,6 +36,7 @@
                         <h3>Vous êtes inscrit avec succès.</h3>
                         <p> Pour vous connecter, c'est <a href='connexion.php'>ici</a>.</p>
                     </div>";
+                    header('Location:connexion.php');
                 }       
                 else
                 {

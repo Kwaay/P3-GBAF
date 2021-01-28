@@ -33,14 +33,16 @@
             <h3><u>Créer un commentaire</u></h3>
             <form method="POST">
                 <div>
-                    <label for="post"><u>Contenu du commentaire :</u><br>
-                       <input type="textarea" name="post" id="post" placeholder="Ecrivez ici">
+                    <label for="post"><u>Contenu du commentaire :</u>
+                    <br />
+                    <br />
+                       <input type="textarea" name="post" id="post" placeholder="Ecrivez ici"  size="50" style="height:250px;">
                     </label>
                 </div>
-                <br>
+                <br />
                 <button type="submit">Poster le commentaire</button>
             </form>
-                <br>
+                <br />
         </div>
         <?php include ('footer.php'); ?>
     </body>

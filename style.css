@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     margin: 0;
     position: relative;
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
 }
 /* <--Header--> */
 
@@ -649,4 +650,19 @@ a:active {
     border: 2px solid red;
     border-radius: 30px;
     padding: 0.5vh;
+}
+.forgot-form {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 30px;
+    max-width: 500px;
+    padding: 2vh;
+    background-color: #a6a6a6;
+}
+.forgot-form h3 {
+    color: red;
+}
+.logo-groupes img {
+    border: 1px solid #a6a6a6;
 }

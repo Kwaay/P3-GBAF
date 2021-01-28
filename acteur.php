@@ -86,16 +86,15 @@
                             $prenomcom->bindParam (':id', $infocom['id_user'] , PDO::PARAM_INT);
                             $prenomcom->execute();
                             $prenom=$prenomcom->fetch(PDO::FETCH_ASSOC);
-
-                            echo htmlspecialchars(ucfirst($prenom['prenom'])); ?>
+                        ?>
+                            <h4><u> Prénom :</u> <?php echo htmlspecialchars(ucfirst($prenom['prenom'])); ?></h4> 
                         </div>
                         <div class="date_com">
-                        <?php
-                            echo htmlspecialchars($date, strtotime($infocom['date_add'])); ?>
+                            <h4><u>Date de la publication :</u> <?php echo htmlspecialchars($date, strtotime($infocom['date_add'])); ?></h4>
                         </div>
                         <div class="text-com">
-                        <?php
-                            echo htmlspecialchars($infocom['post']); ?>
+                            <h4><u>Contenu du commentaire :</u> <?php echo htmlspecialchars($infocom['post']); ?></h4>
+                            
                         </div>
                     </div>   
                     <?php 

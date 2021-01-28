@@ -21,11 +21,11 @@
         ?>
         <div class="profil" align="center">
             <div class="profil-titre">
-                <h2><u>Profil de <?php echo $userinfo['username']; ?></h2></u>
+                <h2><u>Profil de <?php echo ucfirst($userinfo['username']); ?></h2></u>
                 <div class="profil-text">
-                    <u><h3>Nom :</u> <?php echo $userinfo ['nom']; ?></h3>
+                    <u><h3>Nom :</u> <?php echo strtoupper($userinfo ['nom']); ?></h3>
                 
-                    <u><h3>Prénom :</u> <?php echo $userinfo ['prenom']; ?></h3>
+                    <u><h3>Prénom :</u> <?php echo ucfirst($userinfo ['prenom']); ?></h3>
                 
                     <u><h3>Username :</u> <?php echo $userinfo ['username']; ?></h3>
                 
