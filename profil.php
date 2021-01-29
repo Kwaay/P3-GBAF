@@ -14,6 +14,7 @@
         <?php include ("header.php") ?>
         <?php
             require('config.php');
+                // Système de récupération des informations de l'utilisateur pour les afficher dans le profil //
                 $getid = intval($_SESSION['id']);
                 $requser = $bdd->prepare('SELECT * FROM `users` WHERE id = ?');
                 $requser->execute(array($getid));

@@ -1,6 +1,7 @@
 <?php
+  // Démarrage de la session //
   session_start();
-  // Détruire la session.
+  // Destruction la session //
   if(session_destroy())
   {
     header("Location: connexion.php");

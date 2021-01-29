@@ -13,6 +13,7 @@
         <?php include ("header.php"); ?>
         <?php
             require ('config.php');
+            // Système de modification de mot de passe //
             if (!empty($_POST['password'])) 
             {
                 echo "Ok";

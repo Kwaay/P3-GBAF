@@ -10,6 +10,7 @@
         <?php include "header.php" ?>
         <?php
             require('config.php');
+            // Système de récupération des données du formulaire de déconnexion //
             if (isset($_POST['nom'], $_POST['prenom'], $_POST['username'], $_POST['password'], $_POST['question'], $_POST['reponse'])) 
             {
                 if (!empty($_POST['nom'] AND !empty($_POST['prenom']) AND !empty($_POST['username']) AND !empty($_POST['password']) AND !empty($_POST['question'])) AND !empty($_POST['reponse']))

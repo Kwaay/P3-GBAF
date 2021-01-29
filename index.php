@@ -15,6 +15,7 @@
         <?php 
             include ("header.php");
             require('config.php');
+            // Système pour rediriger sur la page connexion si jamais l'utilisateur n'est pas connecté //
             if(isset($_SESSION['username']) AND !empty($_SESSION['username']))
             {
                 

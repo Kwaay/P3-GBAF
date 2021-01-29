@@ -1,16 +1,11 @@
 <?php 
     require ("config.php");
+    // Système d'ajout de votes //
     if(isset($_GET['t'], $_GET['id']) AND !empty($_GET['t']) AND !empty($_GET['id']))
     {
         $getid = (int) $_GET['id'];
         $get_t = (int) $_GET['t'];
 
-        /*$check = $bdd->prepare('SELECT id_acteur FROM vote WHERE id_acteur = ?');
-        $check->execute(array($getid));
-        var_dump($check->rowCount());
-
-        if($check->rowCount() == 1)
-        { */
             if($get_t == 1)
             {
                 $likes = $bdd->prepare('INSERT INTO vote (id_acteur, id_user, vote) VALUES (?, ?, 1)');

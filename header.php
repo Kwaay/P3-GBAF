@@ -8,6 +8,7 @@
     <body>
         <?php
             require ('config.php');
+            // Système d'affichage du Nom / Prénom et des boutons "Profil" & "Déconnexion" si l'utilisateur est connecté //
             if(isset($_SESSION['username']) AND !empty($_SESSION['username']))
             {
                 ?>

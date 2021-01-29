@@ -3,6 +3,7 @@
 ?>
 <?php
     require ('config.php');
+    // Choix de l'acteur à afficher //
     $id_acteur=$_GET['id'];
     $requete=$bdd->prepare('SELECT * FROM acteur WHERE id_acteur=:id_acteur');
     $requete->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
@@ -18,16 +19,19 @@
     $retourcom=$bdd->prepare("SELECT * FROM post");
     $retourcom->execute(array($id_acteur));
 
+    // Nombre de likes //
     $likesreq=$bdd->prepare("SELECT COUNT(*) AS nb_likes FROM vote WHERE vote=1 AND id_acteur=:id_acteur");
     $likesreq->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
     $likesreq->execute();
     $likes=$likesreq->fetch(PDO::FETCH_ASSOC);
 
+    // Nombre de dislikes //
     $dislikesreq=$bdd->prepare("SELECT COUNT(*) AS nb_dislikes FROM vote WHERE vote=2 AND id_acteur=:id_acteur");
     $dislikesreq->bindParam(':id_acteur', $id_acteur, PDO::PARAM_INT);
     $dislikesreq->execute();
     $dislikes=$dislikesreq->fetch();
 
+    // Format de la date //
     $date=date('d/m/Y');
 
 

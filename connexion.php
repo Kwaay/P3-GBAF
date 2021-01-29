@@ -14,6 +14,7 @@
         <?php include ("header.php") ?>
         <?php
             require('config.php');
+            // Système de récupération des données du formulaire de connexion //
             if (isset($_POST['username'], $_POST['password']))
             {
                 $username = htmlspecialchars($_POST['username']);
@@ -31,17 +32,7 @@
                         $_SESSION['password'] = $userinfo['password'];
                         header("Location: index.php");
                     }
-                    else
-                    {
-                        $erreur = "Mauvais identifiants";
-                    }
-          
                 }
-                else 
-                {
-                    $erreur = "Tous les champs doivent être complétés";
-                }
-                
             }
         ?>
 
