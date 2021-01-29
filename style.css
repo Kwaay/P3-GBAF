@@ -666,3 +666,13 @@ a:active {
 .logo-groupes img {
     border: 1px solid #a6a6a6;
 }
+.text-mentionslegales {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2vh;
+    border: 1px solid red;
+    border-radius: 30px;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
