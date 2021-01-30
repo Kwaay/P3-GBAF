@@ -14,17 +14,24 @@
         <?php
             require ('config.php');
             // Système de modification de mot de passe //
-            if (!empty($_POST['password'])) 
+            if(isset($_POST['password'])) 
             {
-                echo "Ok";
-                $changepassword=$bdd->prepare("UPDATE users SET password = :password WHERE id=:id"); 
-                $changepassword->execute(array($_POST['password'], $_SESSION['id']));
-                $newpass=$changepassword->fetch();
-                echo 
-                "<div class='success'>
-                    <h3>Votre mot de passe a été modifié avec succès.</h3>
-                </div>";
-                header('profil.php');
+                $password = sha1($_POST['password']);
+
+                if(!empty($_POST['password'])) 
+                    {
+                        $changepassword=$bdd->prepare("UPDATE users SET password = ? WHERE id= ?"); 
+                        $changepassword->execute(array($password, $_SESSION['id']));
+                        echo 
+                        "<div class='success'>
+                            <h3>Votre mot de passe a été modifié avec succès.</h3>
+                            <p> Vous allez être redirigé vers votre profil dans 3 secondes </p>
+                            <br />
+                        </div>";
+                        ?>
+                        <meta http-equiv="refresh" content="3;profil.php" />
+                        <?php
+                    }
             }
 
             ?>
@@ -35,11 +42,11 @@
                     <label for="password"><u>Votre nouveau mot de passe :</u></label>
                     <br />
                     <br />
-                    <input type="password" name="newpassword" id="newpassword" placeholder="Votre nouveau MDP">
+                    <input type="password" name="password" id="password" placeholder="Votre nouveau MDP">
                 </div>
                 <br>
                 <div class="form_submit">
-                    <input type="submit" value="Envoyer">
+                    <input type="submit" name="submit" value="Envoyer">
                 </div>
                
             </form>
