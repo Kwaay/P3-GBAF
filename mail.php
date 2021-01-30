@@ -17,8 +17,8 @@
                 if($retour) 
                 {
                     echo "Votre demande a bien été envoyé";
-                    header('contact.php');
-                    var_dump($retour);
+                    header('Location: contact.php');
+
                 }
             }
 ?>

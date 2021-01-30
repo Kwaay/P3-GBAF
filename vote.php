@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <?php 
     require ("config.php");
     // Système d'ajout de votes //
@@ -5,12 +8,15 @@
     {
         $getid = (int) $_GET['id'];
         $get_t = (int) $_GET['t'];
+        
+        if(isset())
+        {
 
+        }
             if($get_t == 1)
             {
                 $likes = $bdd->prepare('INSERT INTO vote (id_acteur, id_user, vote) VALUES (?, ?, 1)');
                 $likes->execute(array($getid, $_SESSION['id']));
-                print_r($likes->errorInfo());
             }
             elseif ($get_t == 2)
             {
@@ -18,10 +24,6 @@
                 $dislikes->execute(array($getid, $_SESSION['id']));
             }
             header('Location: '.$_SERVER['HTTP_REFERER']);
-            
-            
-            
-       // }
     }
 ?>
 

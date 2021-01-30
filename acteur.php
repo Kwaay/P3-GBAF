@@ -75,10 +75,9 @@
                         <a href="commentaires.php?id_acteur=<?=$id_acteur ?>" class="link-button">Nouveau<br />commentaire</a>
                     </div>
                         <div class="bouton-like-dislike">
-                        <a href="vote.php?t=1&id=<?= $id_acteur ?>"> <?= $likes['nb_likes']; ?></a>
-                            <i class="fa fa-thumbs-up"></i> 
-                        <a href="vote.php?t=2&id=<?= $id_acteur ?>"> <?= $dislikes['nb_dislikes']; ?></a>
-                            <i class="fa fa-thumbs-down"></i>
+                        <a href="vote.php?t=1&id=<?= $id_acteur ?>"> <?= $likes['nb_likes']; ?> <i class="fa fa-thumbs-up"></i></a> 
+                        <a href="vote.php?t=2&id=<?= $id_acteur ?>"> <?= $dislikes['nb_dislikes']; ?> <i class="fa fa-thumbs-down"></i></a>
+                                
                         </div>
             </div>
                     <?php 
