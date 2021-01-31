@@ -44,7 +44,7 @@
             {
                 ?>
                 <div class="header">
-                    <a href="index.php"><img src="images/logo_gbaf_p3.png" height=125 width=125 /></a>  
+                    <a href="index.php"><img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>  
                 </div>
                 <?php
             }

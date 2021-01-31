@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>GBAF | Mot de passe oublié</title>
+        <title>GBAF | Forgot</title>
 	<link href="style.css" rel="stylesheet" /> 
     </head>
         
@@ -13,8 +13,8 @@
         <?php include ("header.php"); ?>
         <?php
             require ('config.php');
-            // Système de modification de mot de passe //
-            if(isset($_POST['password'] AND $_SESSION['id'])) 
+            // Système de modification de mot de passe connecté //
+            if(isset($_POST['password'], $_SESSION['id'])) 
             {
                 $password = sha1($_POST['password']);
 
@@ -29,7 +29,7 @@
                             <br />
                         </div>";
                         ?>
-                        <meta http-equiv="refresh" content="3;profil.php" />
+                        
                         <?php
                     }
             }
@@ -55,10 +55,5 @@
             <p>Vous avez retrouvé votre mot de passe ? <a href="connexion.php" class="link-button">Se connecter</a></p>
             <br>
         </div>
-
-
-
-
         <?php include ("footer.php") ?>
-    </body>
-</html>
+

@@ -44,14 +44,14 @@
         ?>
             
     
-        <div class="commentaires_form" align="center">
+        <div class="commentaires_form" style="text-align:center;">
             <h3><u>Créer un commentaire</u></h3>
             <form method="POST">
                 <div>
                     <label for="post"><u>Contenu du commentaire :</u>
                     <br />
                     <br />
-                       <input type="textarea" name="post" id="post" placeholder="Ecrivez ici"  size="50" style="height:250px;">
+                       <input type="text" name="post" id="post" placeholder="Ecrivez ici"  size="50" style="height:250px;">
                     </label>
                 </div>
                 <br />
@@ -60,5 +60,4 @@
                 <br />
         </div>
         <?php include ('footer.php'); ?>
-    </body>
-</html>
+        

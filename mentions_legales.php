@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>GBAF | Mentions Légales</title>
-	<link href="style.css" rel="stylesheet" /> 
-    </head>
-        
-    <body>
     <?php include ("header.php"); ?>
         <div class="text-mentionslegales">
             <p>
@@ -51,7 +42,7 @@
 
                 Les marques et logos reproduits sur le site sont déposés par les sociétés qui en sont propriétaires.
 
-                <h3><u>Liens</u><h3>
+                <h3><u>Liens</u></h3>
                 <h4><u>Liens sortants</u></h4>
                 Le propriétaire du site décline toute responsabilité et n’est pas engagé par le référencement via des liens hypertextes, de ressources tierces présentes sur le réseau Internet, tant en ce qui concerne leur contenu que leur pertinence.
 
@@ -70,5 +61,3 @@
         </div>
 
     <?php include ("footer.php") ?>
-    </body>
-</html>

@@ -38,23 +38,14 @@
     
 
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>GBAF | Formation & Co</title>
-    <link href="style.css" rel="stylesheet" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-        
-    <body>
+
         <?php
             include ("header.php");
         ?>
       
         <div class="acteur-formation-co">
             <div class="img-partenaires">
-                <img src="images/<?php echo htmlspecialchars ($reponse['logo']) ?>" alt="Logo du <?php echo htmlspecialchars ($reponse['acteur']) ?>" height=300  width=600 />
+                <img src="images/<?php echo htmlspecialchars ($reponse['logo']) ?>" alt="Logo du <?php echo htmlspecialchars ($reponse['acteur']) ?>" height="300" width="600" />
             </div>
             <div class="text-formation-co-acteurs">
                 <h2><?php echo htmlspecialchars ($reponse['acteur']) ?></h2>
@@ -108,5 +99,3 @@
             </div>
         </div>
         <?php include ("footer.php"); ?>
-    </body>
-</html>
