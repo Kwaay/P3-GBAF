@@ -14,7 +14,7 @@
         <?php
             require ('config.php');
             // Système de modification de mot de passe //
-            if(isset($_POST['password'])) 
+            if(isset($_POST['password'] AND $_SESSION['id'])) 
             {
                 $password = sha1($_POST['password']);
 
@@ -35,6 +35,7 @@
             }
 
             ?>
+            
             <div class="forgot-form">
             <h3><u>Modification de votre mot de passe</u></h3>
             <form method="POST">
