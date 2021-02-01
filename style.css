@@ -494,7 +494,7 @@ body {
     color: red;
 }
 
-/* <-- Formulaires de commentaires --> */
+/* <-- Formulaire de commentaires --> */
 
 .commentaires_form {
     text-align: center;
@@ -512,6 +512,26 @@ body {
 .commentaires_form h3 {
     color: red;
 }
+
+/* <-- Formulaire de mot de passe oublié --> */
+
+.recovery-form {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2vh;
+    padding:2vh;
+    border: 1px solid red;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    background-color: #a6a6a6;
+}
+.recovery-form h3 {
+    color: red;
+}
+
 
 /* <--Profil--> */
 

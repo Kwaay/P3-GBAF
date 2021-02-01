@@ -47,7 +47,7 @@
                 <h3><u>Vérification de votre identité</u></h3>
                 <form method="POST" action="reponsesecrete.php">
                     <div class="recovery-username">
-                        <label for="username"><u>Pseudo : </u></label>
+                        <label for="username"><u>Pseudo :</u></label>
                         <input type="username" name="username" id="username" placeholder="Votre pseudo utilisé">
                     </div>
                     <br />
