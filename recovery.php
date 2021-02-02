@@ -27,16 +27,7 @@
             }
             elseif($get->rowCount() == 1)
             {
-                echo 
-                "
-                <div class='success'>
-                <h3> Votre compte a été trouvé </h3>
-                <p> Redirection vers votre question secrète dans 3 secondes </p>
-                </div>
-                ";
-                ?>
-                <meta http-equiv="refresh" content="3;URL=reponsesecrete.php?username="<?= $username ?>
-                <?php
+                header('Location: reponsesecrete.php?id=' . $infos['id']);
             }         
         }
     }
@@ -45,7 +36,7 @@
             
             <div class="recovery-form">
                 <h3><u>Vérification de votre identité</u></h3>
-                <form method="POST" action="reponsesecrete.php">
+                <form method="POST">
                     <div class="recovery-username">
                         <label for="username"><u>Pseudo :</u></label>
                         <input type="username" name="username" id="username" placeholder="Votre pseudo utilisé">

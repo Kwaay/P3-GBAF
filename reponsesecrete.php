@@ -1,43 +1,37 @@
 <?php include ("header.php"); ?>
 <?php
     require ('config.php');
+
     if(empty($_SESSION['id']))
     {
-        if(isset($_POST['username']) && isset($_POST['reponse']))
+        if(isset($_GET['id']))
         {
-            $username = $_POST['username'];
+            $requser = $bdd->prepare('SELECT * FROM `users` WHERE id = ?');
+            $requser->execute(array($_GET['id']));
+            $userinfo = $requser->fetch();
+        }
+        if(isset($_POST['reponse'], $_POST['newpass']))
+        {
             $reponse = $_POST['reponse'];
-        
-            $get = $bdd->prepare('SELECT * FROM users WHERE username= ? AND reponse = ?');
-            $get->execute(array($username,$reponse));
-            while ($infos = $get->fetch()) 
+            if($userinfo ['reponse'] !== $reponse)
             {
-                if($get->rowCount() == 0)
-                {
-                    echo 
-                    "
-                    <div class='success'>
-                    <h3> Vos informations ne correspondent pas </h3>
-                    <p> Redirection vers la page d'inscription dans 3 secondes </p>
-                    </div>
-                    ";
-                    ?>
-                    <meta http-equiv="refresh" content="3;URL=inscription.php">
-                    <?php
-                }
-                elseif($get->rowCount() == 1)
-                {
-                    echo 
-                    "
-                    <div class='success'>
-                    <h3> Votre mot de passe a été modifié </h3>
-                    <p> Redirection vers l'index dans 3 secondes </p>
-                    </div>
-                    ";
-                    ?>
-                    <?php
-                }         
+                echo 
+                "
+                <div class='success'>
+                <h3> Vos informations ne correspondent pas </h3>
+                </div>
+                ";
+                ?>
+                <?php
             }
+            else
+            {
+                $password = $_POST['newpass'];
+                $passwordhashed = sha1($password);
+                $newpass=$bdd->prepare("UPDATE users SET password = ? WHERE id= ?"); 
+                $newpass->execute(array($passwordhashed, $_GET['id']));
+                header('Location: connexion.php');
+            }         
         }
     }
 
@@ -47,18 +41,23 @@
             
             <div class="recovery-form">
                 <h3><u>Vérification de votre identité</u></h3>
-                <form method="POST">
+                <form method="POST" action="reponsesecrete.php?id=<?= $_GET['id'] ?>">
                     <div class="recovery-username">
-                        <p>Votre pseudo : <?php $get['username']; ?> </p>
+                        <p>Votre pseudo : <?php echo $userinfo['username']; ?> </p>
                     </div>
                     <br />
                     <div class="recovery-question">
-                        <p>Votre Question secrète est : <?php echo $get['question']; ?> </p>
+                        <p>Votre Question secrète est : <?php echo $userinfo['question']; ?> </p>
                     </div>
                         
                     <div class="recovery-reponse">
                         <label for="reponse"><u>Votre réponse :</u></label>
-                        <input type="reponse" name="reponse" id="reponse" placeholder="Votre réponse">
+                        <input type="text" name="reponse" id="reponse" placeholder="Votre réponse">
+                    </div>
+                    <br />
+                    <div class="recovery-newpass">
+                        <label for="newpass"><u>Votre nouveau mot de passe :</u></label>
+                        <input type="password" name="newpass" id="newpass" placeholder="Votre nouveau mot de passe">
                     </div>
                     <br />
                     <div class="form_submit">
