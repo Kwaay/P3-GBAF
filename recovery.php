@@ -1,6 +1,7 @@
 <?php include ("header.php"); ?>
 <?php
     require ('config.php');
+    // Système de récupération des infos en fonction de l'username //
     if(empty($_SESSION['id']))
     {
         if(isset($_POST['username']))

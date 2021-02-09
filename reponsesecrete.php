@@ -1,7 +1,7 @@
 <?php include ("header.php"); ?>
 <?php
     require ('config.php');
-
+    // Système de récupération de la question et de la réponse //
     if(empty($_SESSION['id']))
     {
         if(isset($_GET['id']))
@@ -26,6 +26,7 @@
             }
             else
             {
+                // Puis modification du password si la réponse à la question secrète est bonne //
                 $password = $_POST['newpass'];
                 $passwordhashed = sha1($password);
                 $newpass=$bdd->prepare("UPDATE users SET password = ? WHERE id= ?"); 
@@ -45,11 +46,9 @@
                     <div class="recovery-username">
                         <p>Votre pseudo : <?php echo $userinfo['username']; ?> </p>
                     </div>
-                    <br />
                     <div class="recovery-question">
                         <p>Votre Question secrète est : <?php echo $userinfo['question']; ?> </p>
                     </div>
-                        
                     <div class="recovery-reponse">
                         <label for="reponse"><u>Votre réponse :</u></label>
                         <input type="text" name="reponse" id="reponse" placeholder="Votre réponse">
