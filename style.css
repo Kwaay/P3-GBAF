@@ -548,12 +548,13 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 2vh;
+    margin-bottom: 2vh;
 }
 .profil-titre {
-    text-align:left;
+    text-align:center;
 }
 .profil-text {
-    text-align: left;
+    text-align: center;
 }
 
 /* <--Mentions Légales--> */

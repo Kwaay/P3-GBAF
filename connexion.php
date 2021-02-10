@@ -43,16 +43,15 @@
                     <label for="username"><u>Pseudonyme :</u></label>
                     <input type="text" name="username" id="username" placeholder="Votre pseudo">
                 </div>
-                <br>
+                <br />
                 <div class="form_password">
                     <label for="password"><u>Mot de passe :</u></label>
                     <input type="password" name="password" id="password" placeholder="Votre mot de passe">
                 </div>
-                <br>
+                <br />
                 <div class="form_submit">
                     <input type="submit" value="Se connecter">
                 </div>
-               
             </form>
             <br>
             <p>Pas encore inscrit ? <a href="inscription.php" class="link-button">S'inscrire</a></p>
