@@ -29,7 +29,7 @@
                     <label for="demande"><u>Votre demande :</u></label>
                     <br />
                     <br />
-                    <input type="text" name="demande" id="demande" placeholder="Votre Demande"  size="50" style="height:100px;">
+                    <input type="text" name="demande" id="demande" placeholder="Votre Demande"  size="50">
                 </div>
                 <br />
                 <div class="form_submit">

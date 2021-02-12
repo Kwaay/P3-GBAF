@@ -1,6 +1,7 @@
 <?php
     session_start();
 ?>
+
 <?php
     require ('config.php');
     // Choix de l'acteur à afficher //
@@ -38,6 +39,15 @@
     
 
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>GBAF | Commentaire</title>
+	    <link href="style.css" rel="stylesheet" /> 
+    </head>
+        
+    <body>
 
         <?php
             include ("header.php");
@@ -45,7 +55,7 @@
       
         <div class="acteur-formation-co">
             <div class="img-partenaires">
-                <img src="images/<?php echo htmlspecialchars ($reponse['logo']) ?>" alt="Logo du <?php echo htmlspecialchars ($reponse['acteur']) ?>" height="300" width="600" />
+                <img src="../images/<?php echo htmlspecialchars ($reponse['logo']) ?>" alt="Logo du <?php echo htmlspecialchars ($reponse['acteur']) ?>" />
             </div>
             <div class="text-formation-co-acteurs">
                 <h2><?php echo htmlspecialchars ($reponse['acteur']) ?></h2>
