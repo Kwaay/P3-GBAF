@@ -8,12 +8,15 @@ body {
 /* <--Header--> */
 
 .header {
-    max-width: 1500px;
-    width: 100%;
     margin: 0 auto;
     text-align: center;
-    height: 125px; 
-    width: 125px;
+    height: auto; 
+    width: 10vh;
+}
+.header img {
+    width: 10vh;
+    max-width: 1200px;
+    height: auto;
 }
 .headerconnecte {
     max-width: 1500px;
@@ -41,7 +44,7 @@ body {
 }
 .img-header img {
     height: auto;
-    width: 125px;
+    width: 10vh;
 }
 .infos-profil img {  
     height: 25px;
@@ -724,7 +727,7 @@ a:active {
     }
     .header img {
         height: auto;
-        width: 15%;
+        width: 10vh;
     }
     .logo-groupes img {
         height: auto;
