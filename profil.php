@@ -15,7 +15,12 @@
                 $requete->bindParam(':id_user', $id_user, PDO::PARAM_LOB);
                 $requete->execute(array($id_user));
                 $reponse=$requete->fetch(PDO::FETCH_ASSOC);
-            
+
+                $selavatar = $bdd->prepare('SELECT avatar FROM users WHERE id=:id');
+                $selavatar->execute(array(
+                        'id' => $_SESSION['id']
+                        ));
+                $avatar=$selavatar->fetch(PDO::FETCH_ASSOC);
         ?>
         <div class="profil" style="text-align:center;">
             <div class="profil-titre">
@@ -29,76 +34,71 @@
                     <div class="button-forgot" style="text-align:center;">
                         <a href="forgot.php" class="link-button"> Modifier le mot de passe </a>
                     </div>
-                </div>
+
+                    <?php
+                    if(isset($avatar['avatar']))
+                    {
+                        ?>
+                        <div class="profile-picture">
+                        <h3><u> Votre avatar :</u></h3> <br/>
+                            <img src="membres/avatars/<?php echo htmlspecialchars ($avatar['avatar']) ?>" alt="Logo du <?php echo htmlspecialchars ($avatar['avatar']) ?>" height="auto" width="300" />
+                        </div> 
+                        <?php  
+                    }
+                    else 
+                    {
+                        echo "Vous n'avez pas de photo de profil";
+                    }
+                    ?>
                 <br />
                 <form enctype="multipart/form-data" method="POST" >
                     <input type="file" name="avatar" id="avatar" /> <br /><br />
-                    <input type="submit" value="Modifier" name="picture-profile" />
+                    <?php
+                        if(!isset($avatar['avatar']))
+                        {
+                            ?>
+                            <input type="submit" value="Ajouter" name="picture-profile" action="profil.php" />
+                            <br /> <br />
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <input type="submit" value="Modifier" name="picture-profile" action="profil.php" />
+                            <br />
+                            <br />
+                            <?php
+                        }
+                    ?>
+                    
                 </form>
                 <?php
-                    if(isset($_FILES['avatar']))
-                    {
-                        echo "Ok";
-                        var_dump($_FILES['avatar']);
+                   if(isset($_FILES['avatar']))
+                   {
                         $ValidExtensions = array('jpg', 'jgeg', 'gif', 'png');
-                        $extensionUpload = strtolower(SplFileInfo::getExtension($_FILES['avatar']['name']));
-                        
-        
+                        $splFileInfo = new SplFileInfo($_FILES['avatar']['name']);
+                        $extensionUpload = strtolower($splFileInfo->getExtension());
+
                         if(in_array($extensionUpload, $ValidExtensions))
                         {
-                            echo "Ok2";
-                            
                             if(isset($_POST['picture-profile']))
                             {
-                                $sessionid = $_SESSION['id'];
-                                $checkreq = $bdd->prepare('SELECT * FROM users WHERE id = ?');
-                                $checkreq->execute(array($sessionid));
-                                if($checkreq->rowCount() == 0)
+                                $chemin = "membres/avatars/".$_SESSION['id'].".".$extensionUpload;
+                                $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
+                                if($resultat)
                                 {
-                                    $chemin = "membres/avatars/".$_SESSION['id'].".".$extensionUpload;
-                                    $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
-                                    if($resultat)
-                                    {
-                                        $updateavatar = $bdd->prepare('INSERT users SET avatar = :avatar WHERE id=:id');
-                                        $updateavatar->execute(array(
-                                                'avatar' => $_SESSION['id'].".".$extensionUpload,
-                                                'id' => $_SESSION['id']
-                                        ));
-                                        echo 
-                                        "
-                                        <div class='success'>
-                                        <h3> Votre photo de profil a bien été ajoutée </h3>
-                                        <p>Redirection vers votre page de profil dans 3 secondes</p>
-                                        </div>
-                                        ";
-                                        ?>
-                                        <meta http-equiv="refresh" content="3;URL=profil.php" />
-                                        <?php
-                                    }
-                                }
-                                else
-                                {
-                                    $chemin = "membres/avatars/".$_SESSION['id'].".".$extensionUpload;
-                                    $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
-                                    if($resultat)
-                                    {
-                                        $updateavatar = $bdd->prepare('UPDATE users SET avatar = :avatar WHERE id=:id');
-                                        $updateavatar->execute(array(
-                                                'avatar' => $_SESSION['id'].".".$extensionUpload,
-                                                'id' => $_SESSION['id']
-                                        ));
-                                        echo 
-                                        "
-                                        <div class='success'>
-                                        <h3> Votre photo de profil a bien été modifiée </h3>
-                                        <p>Redirection vers votre page de profil dans 3 secondes</p>
-                                        </div>
-                                        ";
-                                        ?>
-                                        <meta http-equiv="refresh" content="3;URL=profil.php" />
-                                        <?php
-                                    }    
-                                }
+                                    $updateavatar = $bdd->prepare('UPDATE users SET avatar = :avatar WHERE id=:id');
+                                    $updateavatar->execute(array(
+                                            'avatar' => $_SESSION['id'].".".$extensionUpload,
+                                            'id' => $_SESSION['id']
+                                    ));
+                                    echo 
+                                    "
+                                    <div class='success'>
+                                    <h3> Votre photo de profil a bien été modifiée </h3>
+                                    </div>
+                                    ";
+                                }    
                             }
                         }   
                     }
