@@ -11,16 +11,23 @@
     <body>
         <?php
             require ('config.php');
+
             // Système d'affichage du Nom / Prénom et des boutons "Profil" & "Déconnexion" si l'utilisateur est connecté //
             if(isset($_SESSION['username']) AND !empty($_SESSION['username']))
             {
+                // Système pour récupérer la photo de profil
+                $selavatar = $bdd->prepare('SELECT avatar FROM users WHERE id=:id');
+                $selavatar->execute(array(
+                        'id' => $_SESSION['id']
+                        ));
+                $avatar=$selavatar->fetch(PDO::FETCH_ASSOC);
                 ?>
                     <div class="headerconnecte">
                         <div class="img-header" style="padding: 2vh;">
                             <a href="index.php"><img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
                         </div>
                         <div class="infos-profil">
-                            <a href="profil.php"><img src="images/unknown.png" height="25" width="25" alt="profile-picture" /></a>
+                            <a href="profil.php"><img src="membres/avatars/<?php echo htmlspecialchars ($avatar['avatar']) ?>" height="auto" width="50" alt="Photo de profil" /></a>
                                 <?php 
                                     $getid = intval($_SESSION['id']);
                                     $infoprofil=$bdd->prepare('SELECT nom,prenom FROM users WHERE id=:id');

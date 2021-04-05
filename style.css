@@ -20,7 +20,13 @@ body {
     text-align: center;
     padding-bottom: 2vh;
 }
-
+.infos-profil img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: auto 32 / 32;
+}
 /* <--Présentation GBAF--> */
 
 .texte-gbaf {
@@ -537,7 +543,6 @@ body {
 
 
 /* <--Profil--> */
-
 .profil {
     border: 2px solid red;
     border-radius: 30px;
