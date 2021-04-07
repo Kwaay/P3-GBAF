@@ -8,15 +8,10 @@ body {
 /* <--Header--> */
 
 .header {
+    max-width: 1500px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    height: auto; 
-    width: 10vh;
-}
-.header img {
-    width: 10vh;
-    max-width: 1200px;
-    height: auto;
 }
 .headerconnecte {
     max-width: 1500px;
@@ -25,32 +20,12 @@ body {
     text-align: center;
     padding-bottom: 2vh;
 }
-.profil-button {
-    border: 2px solid red; 
-    border-radius: 30px; 
-    padding: 0.5vh; 
-    text-align: center; 
-    display: inline-flex;
+.infos-profil img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.deco-button {
-    border: 2px solid red; 
-    border-radius: 30px; 
-    padding: 0.5vh; 
-    text-align: center; 
-    display: inline-flex;
-}
-.img-header {
-    padding: 2vh;
-}
-.img-header img {
-    height: auto;
-    width: 10vh;
-}
-.infos-profil img {  
-    height: 25px;
-    width: 25px;
-}
-
 /* <--Présentation GBAF--> */
 
 .texte-gbaf {
@@ -84,8 +59,7 @@ body {
 .texte-partenaires p {
     width: 100%;
     max-width: 750px;
-    display: inline-block;
-    padding-bottom: 2vh;  
+    display: inline-block;  
 }
 .texte-partenaires h2 {
     color:red;
@@ -112,10 +86,6 @@ body {
     margin: 0 auto;
     margin-bottom: 2vh;
 }
-.logo-groupes img {
-    height: auto;
-    width: 150px;
-}
 
 /* <--Partenaire Formation&Co--> */
 
@@ -125,7 +95,7 @@ body {
     width: 100%;
     max-width: 1500px;
     border: 1px solid red;
-    display: flex;
+    display:flex;
     align-items: center;
 }
 .partenaire-formation-co p {
@@ -139,8 +109,6 @@ body {
 .partenaire-formation-co img {
     display: block;
     margin-left: 2vh;
-    height: auto;
-    width: 25%;
 }
 
 /* <--Partenaire ProtectPeople--> */
@@ -264,7 +232,6 @@ body {
     display: inline-block;
     float: right;
 }
-
 /* <--Page Acteur : Formation & Co--> */
 
 .acteur-formation-co {
@@ -295,8 +262,6 @@ body {
     -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    height: auto; 
-    width: 600px;
 }
 
 /* <--Page Acteur : Protect People--> */
@@ -516,7 +481,6 @@ body {
     border: 2px solid red;
     border-radius: 30px;
     padding: 0.5vh;
-    text-align:center;
 }
 
 /* <--Formulaire de contact--> */
@@ -537,9 +501,6 @@ body {
 .contact-form h3 {
     color: red;
 }
-.form-demande input {
-    height:100px;
-}
 
 /* <-- Formulaire de commentaires --> */
 
@@ -558,9 +519,6 @@ body {
 }
 .commentaires_form h3 {
     color: red;
-}
-.commentaires_form input {
-    height: 250px;
 }
 
 /* <-- Formulaire de mot de passe oublié --> */
@@ -584,7 +542,6 @@ body {
 
 
 /* <--Profil--> */
-
 .profil {
     border: 2px solid red;
     border-radius: 30px;
@@ -595,13 +552,13 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 2vh;
-    text-align:center;
+    margin-bottom: 2vh;
 }
 .profil-titre {
-    text-align:left;
+    text-align:center;
 }
 .profil-text {
-    text-align: left;
+    text-align: center;
 }
 
 /* <--Mentions Légales--> */
@@ -683,15 +640,15 @@ a:active {
 
 @media screen and (min-width:750px) and (max-width:1100px) {
     .header img {
-        height: auto;
+        height: 15%;
         width: 15%;
     }
     .logo-groupes img {
-        height: auto;
+        height: 15%;
         width: 15%;
     }
     .partenaires img {
-        height: auto;
+        height: 30%;
         width: 30%;
     }
     .partenaires {
@@ -726,11 +683,11 @@ a:active {
         margin: 0 auto;
     }
     .header img {
-        height: auto;
-        width: 10vh;
+        height: 15%;
+        width: 15%;
     }
     .logo-groupes img {
-        height: auto;
+        height: 10%;
         width: 10%;
     }
     .partenaires {

@@ -1,774 +1,822 @@
+@charset "UTF-8";
 body {
-    padding-bottom: 60px;
-    min-height: 94vh;
-    margin: 0;
-    position: relative;
-    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+  padding-bottom: 60px;
+  min-height: 94vh;
+  margin: 0;
+  position: relative;
+  font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
 }
+
 /* <--Header--> */
-
 .header {
-    max-width: 1500px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
+
 .headerconnecte {
-    max-width: 1500px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 2vh;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2vh;
 }
+
 .infos-profil img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    overflow: hidden;
-    aspect-ratio: auto 32 / 32;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
 /* <--Présentation GBAF--> */
-
 .texte-gbaf {
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 5vh;
-    border-top: 2px solid #FF0000;
-    border-bottom: 2px solid #FF0000;
-    width: 100%;
-    max-width: 1500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  border-top: 2px solid #FF0000;
+  border-bottom: 2px solid #FF0000;
+  width: 100%;
+  max-width: 1500px;
 }
-.texte-gbaf p {
-    width: 100%;
-    max-width: 750px;
-    display: inline-block;  
-}
-.texte-gbaf h1 {
-    color: red;
 
+.texte-gbaf p {
+  width: 100%;
+  max-width: 750px;
+  display: inline-block;
+}
+
+.texte-gbaf h1 {
+  color: red;
 }
 
 /* <--Présentation Partenaires--> */
-
 .texte-partenaires {
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 5vh;
-    width: 100%;
-    max-width: 1500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 100%;
+  max-width: 1500px;
 }
+
 .texte-partenaires p {
-    width: 100%;
-    max-width: 750px;
-    display: inline-block;  
+  width: 100%;
+  max-width: 750px;
+  display: inline-block;
 }
+
 .texte-partenaires h2 {
-    color:red;
+  color: red;
 }
 
 /* <--Titres Partenaires--> */
 .text-container {
-    padding: 3vw;
+  padding: 3vw;
 }
+
 .text-container h3 {
-    color: red;
+  color: red;
 }
 
 /* <--Partenaires--> */
-
 .partenaires {
-    border: 2px solid red;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    max-width: 1500px;
-    width: 90%;
-    padding: 2vh;
-    margin: 0 auto;
-    margin-bottom: 2vh;
+  border: 2px solid red;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  max-width: 1500px;
+  width: 90%;
+  padding: 2vh;
+  margin: 0 auto;
+  margin-bottom: 2vh;
 }
 
 /* <--Partenaire Formation&Co--> */
-
 .partenaire-formation-co {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1500px;
-    border: 1px solid red;
-    display:flex;
-    align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
 }
+
 .partenaire-formation-co p {
-    width: 100%;
-    max-width: 1100px;
-    text-align: center;
-    margin-left: 2vh;
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  margin-left: 2vh;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .partenaire-formation-co img {
-    display: block;
-    margin-left: 2vh;
+  display: block;
+  margin-left: 2vh;
 }
 
 /* <--Partenaire ProtectPeople--> */
-
 .partenaire-protect-people {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1500px; 
-    border: 1px solid red;
-    display:flex;
-    align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
 }
+
 .partenaire-protect-people p {
-    width: 100%;
-    max-width: 1100px;
-    text-align: left;
-    margin-left: 2vh;
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin-left: 2vh;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .partenaire-protect-people img {
-    display: block;
-    margin-left: 2vh;
+  display: block;
+  margin-left: 2vh;
 }
 
 /* <--Partenaire DSA France--> */
-
 .partenaire-dsa-france {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1500px;
-    border: 1px solid red;
-    display:flex;
-    align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
 }
+
 .partenaire-dsa-france p {
-    width: 100%;
-    max-width: 1100px;
-    text-align: left;
-    margin-left: 2vh;
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin-left: 2vh;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .partenaire-dsa-france img {
-    display: block;
-    margin-left: 2vh;
+  display: block;
+  margin-left: 2vh;
 }
 
 /* <--Partenaire CDE--> */
-
 .partenaire-cde {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1500px;
-    border: 1px solid red;
-    display:flex;
-    align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
 }
+
 .partenaire-cde p {
-    width: 100%;
-    max-width: 1100px;
-    text-align: left;
-    margin-left: 2vh;
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin-left: 2vh;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .partenaire-cde img {
-    display: block;
-    margin-left: 2vh;
+  display: block;
+  margin-left: 2vh;
 }
 
 /* <--Boutons Partenaires--> */
-
 .button-formation-co {
-    border: 2px solid red;
-    border-radius: 30px;
-    box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
-    padding: 0.5vh;
-    margin-left: auto;
-    margin-top:auto;
-    margin-bottom: 2vh;
-    margin-right: 2vh;
-    display: inline-block;
-    float: right;
+  border: 2px solid red;
+  border-radius: 30px;
+  box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
+  padding: 0.5vh;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
+  display: inline-block;
+  float: right;
 }
-.button-protect-people {
-    border: 2px solid red;
-    border-radius: 30px;
-    box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
-    padding: 0.5vh;
-    margin-left: auto;
-    margin-top:auto;
-    margin-bottom: 2vh;
-    margin-right: 2vh;
-    display: inline-block;
-    float: right;
-}
-.button-dsa-france {
-    border: 2px solid red;
-    border-radius: 30px;
-    box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
-    padding: 0.5vh;
-    margin-left: auto;
-    margin-top:auto;
-    margin-bottom: 2vh;
-    margin-right: 2vh;
-    display: inline-block;
-    float: right;
-}
-.button-cde {
-    border: 2px solid red;
-    border-radius: 30px;
-    padding: 0.5vh;
-    margin-left: auto;
-    margin-top:auto;
-    margin-bottom: 2vh;
-    margin-right: 2vh;
-    display: inline-block;
-    float: right;
-}
-/* <--Page Acteur : Formation & Co--> */
 
+.button-protect-people {
+  border: 2px solid red;
+  border-radius: 30px;
+  box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
+  padding: 0.5vh;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
+  display: inline-block;
+  float: right;
+}
+
+.button-dsa-france {
+  border: 2px solid red;
+  border-radius: 30px;
+  box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
+  padding: 0.5vh;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
+  display: inline-block;
+  float: right;
+}
+
+.button-cde {
+  border: 2px solid red;
+  border-radius: 30px;
+  padding: 0.5vh;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
+  display: inline-block;
+  float: right;
+}
+
+/* <--Page Acteur : Formation & Co--> */
 .acteur-formation-co {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 10px;
-    height: 100%;
-    border: 1px solid red; 
-    margin-bottom: 1vh;  
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid red;
+  margin-bottom: 1vh;
 }
+
 .text-formation-co-acteurs h2 {
-    margin-left: 2vh;
-    text-align: center;
+  margin-left: 2vh;
+  text-align: center;
 }
+
 .text-formation-co-acteurs p {
-    width: 100%;
-    max-width:1400px;
-    margin-left: 2vh;
-    text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: 2vh;
+  text-align: center;
 }
-.img-partenaires{    
-    text-align: center;
-    padding-top: 1vh;
+
+.img-partenaires {
+  text-align: center;
+  padding-top: 1vh;
 }
+
 .img-partenaires img {
-    border: 1px solid #a6a6a6;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+  border: 1px solid #a6a6a6;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
 }
 
 /* <--Page Acteur : Protect People--> */
-
 .acteur-protect-people {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 10px;
-    height: 100%;
-    border: 1px solid red; 
-    margin-bottom: 1vh;  
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid red;
+  margin-bottom: 1vh;
 }
+
 .text-protectpeople-acteurs h2 {
-    margin-left: 2vh;
+  margin-left: 2vh;
 }
+
 .text-protectpeople-acteurs p {
-    display: inline-flex;
-    width: 100%;
-    max-width:700px;
-    margin-left: 2vh;
+  display: inline-flex;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 2vh;
 }
-.img-partenaires{    
-    text-align: center;
+
+.img-partenaires {
+  text-align: center;
 }
 
 /* <--Page Acteur : DSA France--> */
-
 .acteur-dsa-france {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 10px;
-    height: 100%;
-    border: 1px solid red; 
-    margin-bottom: 1vh;  
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid red;
+  margin-bottom: 1vh;
 }
+
 .text-dsa-france-acteurs h2 {
-    margin-left: 2vh;
+  margin-left: 2vh;
 }
+
 .text-dsa-france-acteurs p {
-    display: inline-flex;
-    width: 100%;
-    max-width:700px;
-    margin-left: 2vh;
+  display: inline-flex;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 2vh;
 }
-.img-partenaires{    
-    text-align: center;
+
+.img-partenaires {
+  text-align: center;
 }
 
 /* <--Page Acteur : CDE--> */
-
 .acteur-cde {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 10px;
-    height: 100%;
-    border: 1px solid red; 
-    margin-bottom: 1vh;  
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid red;
+  margin-bottom: 1vh;
 }
+
 .text-cde-acteurs h2 {
-    margin-left: 2vh;
+  margin-left: 2vh;
 }
+
 .text-cde-acteurs p {
-    display: inline-flex;
-    width: 100%;
-    max-width:700px;
-    margin-left: 2vh;
+  display: inline-flex;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 2vh;
 }
-.img-partenaires{    
-    text-align: center;
+
+.img-partenaires {
+  text-align: center;
 }
 
 /* <-- Menu Commentaires--> */
-
 .commentaires {
-    border: 1px solid red;
-    padding: 1vh;
-    width: 100%;
-    max-width:1500px;
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-} 
+  border: 1px solid red;
+  padding: 1vh;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
 
 .menu-commentaires {
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    margin-left: 1vh;
-    
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-left: 1vh;
 }
 
 /* <--Bouton Commentaires--> */
-
 .bouton-commentaire {
-    border: 1px solid red;
-    border-radius: 10px;
-    margin-left:auto;
-    margin-bottom: auto;
-    padding: 0.5vh;
-    margin-right: 1vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-bottom: auto;
+  padding: 0.5vh;
+  margin-right: 1vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
 }
+
 .bouton-like-dislike {
-    border: 1px solid red;
-    border-radius: 10px;
-    margin-bottom: auto;
-    margin-right: 2vh;
-    padding: 1vh;
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-bottom: auto;
+  margin-right: 2vh;
+  padding: 1vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
 }
+
 .fa {
-    padding: 0.5vh;
+  padding: 0.5vh;
 }
 
 /* <--Commentaires--> */
-
 .info-commentaires {
-    border: 1px solid red;
-    border-radius: 10px;
-    padding: 1vh;
-    margin: 1vh;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 1vh;
+  margin: 1vh;
 }
-
 
 /* <--Formulaire de Connexion--> */
-
 .connexion_form h3 {
-    color:#FF0000;
-    text-align:center;
-    padding: 10px;
+  color: #FF0000;
+  text-align: center;
+  padding: 10px;
+}
 
-}
 .connexion_form {
-    text-align: center;
-    padding:10px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #a6a6a6;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin-top: 5vh;
-    margin-bottom: 1vh;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #a6a6a6;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
 }
+
 .connexion_form label {
-    display: inline-block;
-    width: 25%;
+  display: inline-block;
+  width: 25%;
 }
 
 /* <--Formulaire d'Inscription--> */
-
 .inscription_form {
-    text-align: center;
-    padding:10px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #a6a6a6;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-   
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #a6a6a6;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
 }
-.inscription_form h3 {
-    color:#FF0000;
-    text-align: center;
 
+.inscription_form h3 {
+  color: #FF0000;
+  text-align: center;
 }
+
 .inscription_form label {
-    display: inline-block;
-    width: 25%;
+  display: inline-block;
+  width: 25%;
 }
 
 /* <-- Mot de passe oublié --> */
-
 .success {
-    text-align:center;
-    padding:2vh;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 2vh;
+  text-align: center;
+  padding: 2vh;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2vh;
 }
+
 .forgot-form {
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    max-width: 500px;
-    padding: 2vh;
-    background-color: #a6a6a6;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  max-width: 500px;
+  padding: 2vh;
+  background-color: #a6a6a6;
 }
+
 .forgot-form h3 {
-    color: red;
+  color: red;
 }
+
 .button-forgot {
-    border: 2px solid red;
-    border-radius: 30px;
-    padding: 0.5vh;
+  border: 2px solid red;
+  border-radius: 30px;
+  padding: 0.5vh;
 }
 
 /* <--Formulaire de contact--> */
-
 .contact-form {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 2vh;
-    padding:2vh;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    background-color: #a6a6a6;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2vh;
+  padding: 2vh;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  background-color: #a6a6a6;
 }
+
 .contact-form h3 {
-    color: red;
+  color: red;
 }
 
 /* <-- Formulaire de commentaires --> */
-
 .commentaires_form {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 2vh;
-    padding:2vh;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    background-color: #a6a6a6;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2vh;
+  padding: 2vh;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  background-color: #a6a6a6;
 }
+
 .commentaires_form h3 {
-    color: red;
+  color: red;
 }
 
 /* <-- Formulaire de mot de passe oublié --> */
-
 .recovery-form {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 2vh;
-    padding:2vh;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    background-color: #a6a6a6;
-}
-.recovery-form h3 {
-    color: red;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2vh;
+  padding: 2vh;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  background-color: #a6a6a6;
 }
 
+.recovery-form h3 {
+  color: red;
+}
 
 /* <--Profil--> */
 .profil {
-    border: 2px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2vh;
-    margin-bottom: 2vh;
+  border: 2px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2vh;
+  margin-bottom: 2vh;
 }
+
 .profil-titre {
-    text-align:center;
+  text-align: center;
 }
+
 .profil-text {
-    text-align: center;
+  text-align: center;
 }
 
 /* <--Mentions Légales--> */
-
 .text-mentionslegales {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2vh;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin-bottom: 2vh;
-    margin-top: 2vh;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2vh;
+  border: 1px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 5px 1px #e01414;
+  -moz-box-shadow: 0px 0px 5px 1px #e01414;
+  box-shadow: 0px 0px 5px 1px #e01414;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
 /* <--Liens--> */
-
 a:link {
-    color:red;
-    text-decoration: none;
-    text-decoration-line: none;
+  color: red;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 a:visited {
-    color: red;
-    text-decoration: none;
-    text-decoration-line: none;
+  color: red;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 a:focus {
-    text-decoration: none;
-    text-decoration-line: none;
+  text-decoration: none;
+  text-decoration-line: none;
 }
+
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:active {
-    text-decoration: none;
-    text-decoration-line: none;
+  text-decoration: none;
+  text-decoration-line: none;
 }
-
 
 /* <--Footer--> */
-
-.footer{
-    background-color:#FF0000;
-    color:#FFF;
-    text-align:center;
-    padding:0.5vh;
-    margin-top: 2vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.footer {
+  background-color: #FF0000;
+  color: #FFF;
+  text-align: center;
+  padding: 0.5vh;
+  margin-top: 2vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 .footer a {
-    color: #FFF;
+  color: #FFF;
 }
+
 .footer_mentions_legales {
-    color: white!important;
-    text-decoration: none;
-    text-decoration-line: none;
-   
+  color: white !important;
+  text-decoration: none;
+  text-decoration-line: none;
 }
+
 .footer_contact {
-    color: white!important;
-    text-decoration: none;
-    text-decoration-line: none;
-}
-.footer_index{
-    color: white!important;
-    text-decoration: none;
-    text-decoration-line: none;
+  color: white !important;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
-@media screen and (min-width:750px) and (max-width:1100px) {
-    .header img {
-        height: 15%;
-        width: 15%;
-    }
-    .logo-groupes img {
-        height: 15%;
-        width: 15%;
-    }
-    .partenaires img {
-        height: 30%;
-        width: 30%;
-    }
-    .partenaires {
-        width: 80vw;
-    }
-    .text-container {
-        padding: 2vh;
-    }
-    .img-partenaires img {
-        width: 75%;
-        height: 75%;
-    }
-    .partenaire-formation-co p {
-        width: auto;
-    }
-    .text-formation-co-acteurs p {
-        width: 90%;
-    }
-    .text-protectpeople-acteurs p {
-        width: 90%;
-    }
-    .text-dsa-france-acteurs p {
-        width: 90%;
-    }
-    .text-cde-acteurs p {
-        width: 90%;
-    }
+.footer_index {
+  color: white !important;
+  text-decoration: none;
+  text-decoration-line: none;
 }
-@media screen and (min-width: 0px) and (max-width:749px) {
-    
-    body {
-        margin: 0 auto;
-    }
-    .header img {
-        height: 15%;
-        width: 15%;
-    }
-    .logo-groupes img {
-        height: 10%;
-        width: 10%;
-    }
-    .partenaires {
-        padding: 2vh;
-        width: 80vw;
-    }
-    .partenaire-formation-co {
-        display: inline-block;
-        width: 100%;
-        max-width: 750px;
-    }
-    .partenaire-formation-co img {
-       display: inline-block;
-       padding-top: 2vh;
-    }
-    .button-formation-co {
-        display: inline-flex;
-        float: right;
-    }
-    .text-container {
-        margin-right: 2vh;
-        width: 90%;
 
-    }
-    .partenaire-protect-people {
-        display: inline-block;
-        width: 100%;
-        max-width: 750px;
-        margin-top: 2vh;
-    }
-    .partenaire-protect-people img {
-        display: inline-block;
-        padding-top: 2vh;
-    }
-    .button-protect-people {
-        display: inline-block;
-        float: right;
-    }
-    .partenaire-dsa-france {
-        display: inline-block;
-        width: 100%;
-        max-width: 750px;
-        margin-top: 2vh;
-    }
-    .partenaire-dsa-france img {
-        display: inline-block;
-        padding-top: 2vh;
-    }
-    .button-dsa-france {
-        display: inline-block;
-        float: right;
-    }
-    .partenaire-cde {
-        display: inline-block;
-        width: 100%;
-        max-width: 750px;
-        margin-top: 2vh;
-    }
-    .partenaire-cde img {
-        display: inline-block;
-        padding-top: 2vh;
-    }
-    .button-cde {
-        display: inline-block;
-        float: right;
-    }
-    .img-partenaires img {
-        width: 75%;
-        height: 75%;
-    }
-    .text-formation-co-acteurs p {
-        width: 90%;
-    }
-    .text-protectpeople-acteurs p {
-        width: 90%;
-    }
-    .text-dsa-france-acteurs p {
-        width: 90%;
-    }
-    .text-cde-acteurs p {
-        width: 90%;
-    }
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  .header img {
+    height: 15%;
+    width: 15%;
+  }
+
+  .logo-groupes img {
+    height: 15%;
+    width: 15%;
+  }
+
+  .partenaires img {
+    height: 30%;
+    width: 30%;
+  }
+
+  .partenaires {
+    width: 80vw;
+  }
+
+  .text-container {
+    padding: 2vh;
+  }
+
+  .img-partenaires img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .partenaire-formation-co p {
+    width: auto;
+  }
+
+  .text-formation-co-acteurs p {
+    width: 90%;
+  }
+
+  .text-protectpeople-acteurs p {
+    width: 90%;
+  }
+
+  .text-dsa-france-acteurs p {
+    width: 90%;
+  }
+
+  .text-cde-acteurs p {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 749px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .header img {
+    height: 15%;
+    width: 15%;
+  }
+
+  .logo-groupes img {
+    height: 10%;
+    width: 10%;
+  }
+
+  .partenaires {
+    padding: 2vh;
+    width: 80vw;
+  }
+
+  .partenaire-formation-co {
+    display: inline-block;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .partenaire-formation-co img {
+    display: inline-block;
+    padding-top: 2vh;
+  }
+
+  .button-formation-co {
+    display: inline-flex;
+    float: right;
+  }
+
+  .text-container {
+    margin-right: 2vh;
+    width: 90%;
+  }
+
+  .partenaire-protect-people {
+    display: inline-block;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 2vh;
+  }
+
+  .partenaire-protect-people img {
+    display: inline-block;
+    padding-top: 2vh;
+  }
+
+  .button-protect-people {
+    display: inline-block;
+    float: right;
+  }
+
+  .partenaire-dsa-france {
+    display: inline-block;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 2vh;
+  }
+
+  .partenaire-dsa-france img {
+    display: inline-block;
+    padding-top: 2vh;
+  }
+
+  .button-dsa-france {
+    display: inline-block;
+    float: right;
+  }
+
+  .partenaire-cde {
+    display: inline-block;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 2vh;
+  }
+
+  .partenaire-cde img {
+    display: inline-block;
+    padding-top: 2vh;
+  }
+
+  .button-cde {
+    display: inline-block;
+    float: right;
+  }
+
+  .img-partenaires img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .text-formation-co-acteurs p {
+    width: 90%;
+  }
+
+  .text-protectpeople-acteurs p {
+    width: 90%;
+  }
+
+  .text-dsa-france-acteurs p {
+    width: 90%;
+  }
+
+  .text-cde-acteurs p {
+    width: 90%;
+  }
 }
