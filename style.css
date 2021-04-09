@@ -23,6 +23,44 @@ body {
   padding-bottom: 2vh;
 }
 
+.img-header {
+  padding: 2vh;
+}
+
+.profil-button {
+  border: 2px solid red;
+  border-radius: 30px;
+  padding: 0.5vh;
+  text-align: center;
+  display: inline-flex;
+  margin: 0.5vh;
+  transition: all 450ms;
+}
+.profil-button:hover {
+  transform: scale(1.13);
+  background-color: red;
+}
+.profil-button:hover a {
+  color: white;
+}
+
+.deco-button {
+  border: 2px solid red;
+  border-radius: 30px;
+  padding: 0.5vh;
+  text-align: center;
+  display: inline-flex;
+  margin: 0.5vh;
+  transition: all 450ms;
+}
+.deco-button:hover {
+  transform: scale(1.13);
+  background-color: red;
+}
+.deco-button:hover a {
+  color: white;
+}
+
 .infos-profil img {
   width: 32px;
   height: 32px;
@@ -193,7 +231,7 @@ body {
 }
 
 /* <--Boutons Partenaires--> */
-.button-formation-co {
+.button-partenaires {
   border: 2px solid red;
   border-radius: 30px;
   box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
@@ -204,44 +242,14 @@ body {
   margin-right: 2vh;
   display: inline-block;
   float: right;
+  transition: all 450ms;
 }
-
-.button-protect-people {
-  border: 2px solid red;
-  border-radius: 30px;
-  box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
-  padding: 0.5vh;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 2vh;
-  margin-right: 2vh;
-  display: inline-block;
-  float: right;
+.button-partenaires:hover {
+  transform: scale(1.13);
+  background-color: red;
 }
-
-.button-dsa-france {
-  border: 2px solid red;
-  border-radius: 30px;
-  box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
-  padding: 0.5vh;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 2vh;
-  margin-right: 2vh;
-  display: inline-block;
-  float: right;
-}
-
-.button-cde {
-  border: 2px solid red;
-  border-radius: 30px;
-  padding: 0.5vh;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 2vh;
-  margin-right: 2vh;
-  display: inline-block;
-  float: right;
+.button-partenaires:hover a {
+  color: white;
 }
 
 /* <--Page Acteur : Formation & Co--> */
@@ -612,10 +620,6 @@ a:visited {
 a:focus {
   text-decoration: none;
   text-decoration-line: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 a:active {

@@ -38,7 +38,8 @@
                 Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.)
                 recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.
                 </p>
-                <br>
+                <br />
+                <br />
             </div>
     <div class="partenaires">
         <?php 
@@ -50,7 +51,7 @@
                     <div class="text-container">
                         <h3><u><?php echo htmlspecialchars($donnees['acteur']) ?></u></h3>
                         <p><?php echo htmlspecialchars($donnees['description'])?></p>
-                        <div class="button-formation-co">
+                        <div class="button-partenaires">
                             <a href="acteur.php?id=<?php echo htmlspecialchars ($donnees ['id_acteur'])?>" class="link-button">Lire la suite</a>
                         </div>
                     </div>   

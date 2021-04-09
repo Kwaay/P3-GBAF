@@ -23,7 +23,7 @@
                 $avatar=$selavatar->fetch(PDO::FETCH_ASSOC);
                 ?>
                     <div class="headerconnecte">
-                        <div class="img-header" style="padding: 2vh;">
+                        <div class="img-header">
                             <a href="index.php"><img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
                         </div>
                         <div class="infos-profil">
@@ -39,10 +39,10 @@
                         <div class="text-header">
                             <p> Bonjour <?php echo (strtoupper($profil['nom']))?> <?php echo ucfirst($profil['prenom']);?> </p> <br />
                         </div>
-                        <div class="profil-button" style="border: 2px solid red; border-radius: 30px; padding: 0.5vh; text-align: center; display: inline-flex">
+                        <div class="profil-button">
                             <a href="profil.php" class="link-button">Paramètres du compte</a>
                         </div> 
-                        <div class="deco-button" style="border: 2px solid red; border-radius: 30px; padding: 0.5vh; text-align: center; display: inline-flex">
+                        <div class="deco-button">
                             <a href="deconnexion.php" class="link-button">Se déconnecter</a>
                         </div>
                     </div>
