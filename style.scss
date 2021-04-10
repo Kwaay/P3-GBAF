@@ -76,7 +76,7 @@ body {
 .texte-gbaf p {
     width: 100%;
     max-width: 750px;
-    display: inline-block;  
+    display: inline-block;
 }
 .texte-gbaf h1 {
     color: red;
@@ -87,10 +87,7 @@ body {
 
 .texte-partenaires {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 5vh;
     width: 100%;
-    max-width: 1500px;
 }
 .texte-partenaires p {
     width: 100%;
@@ -103,7 +100,7 @@ body {
 
 /* <--Titres Partenaires--> */
 .text-container {
-    padding: 3vw;
+    padding-right: 3vw;
 }
 .text-container h3 {
     color: red;
@@ -133,11 +130,11 @@ body {
     border: 1px solid red;
     display:flex;
     align-items: center;
+    
 }
 .partenaire-formation-co p {
     width: 100%;
-    max-width: 1100px;
-    text-align: center;
+    text-align: justify;
     margin-left: 2vh;
     display: inline-block;
     vertical-align: top;
@@ -145,6 +142,10 @@ body {
 .partenaire-formation-co img {
     display: block;
     margin-left: 2vh;
+    transition: all 450ms;
+    &:hover {
+        box-shadow: 1px 0px 5px 1px rgba(166,166,166,1);
+    }
 }
 
 /* <--Partenaire ProtectPeople--> */
@@ -169,6 +170,10 @@ body {
 .partenaire-protect-people img {
     display: block;
     margin-left: 2vh;
+    transition: all 450ms;
+    &:hover {
+        box-shadow: 1px 0px 5px 1px rgba(166,166,166,1);
+    }
 }
 
 /* <--Partenaire DSA France--> */
@@ -193,6 +198,10 @@ body {
 .partenaire-dsa-france img {
     display: block;
     margin-left: 2vh;
+    transition: all 450ms;
+    &:hover {
+        box-shadow: 1px 0px 5px 1px rgba(166,166,166,1);
+    }
 }
 
 /* <--Partenaire CDE--> */
@@ -217,6 +226,10 @@ body {
 .partenaire-cde img {
     display: block;
     margin-left: 2vh;
+    transition: all 450ms;
+    &:hover {
+        box-shadow: 5px 5px 5px 5px rgba(166,166,166,1);
+    }
 }
 
 /* <--Boutons Partenaires--> */
@@ -253,14 +266,13 @@ body {
     margin-bottom: 1vh;  
 }
 .text-formation-co-acteurs h2 {
-    margin-left: 2vh;
     text-align: center;
 }
 .text-formation-co-acteurs p {
-    width: 100%;
-    max-width:1400px;
-    margin-left: 2vh;
-    text-align: center;
+    width: 97%;
+    max-width:1500px;
+    padding: 2vh;
+    text-align: justify;
 }
 .img-partenaires{    
     text-align: center;
@@ -365,6 +377,7 @@ body {
     
 }
 
+
 /* <--Bouton Commentaires--> */
 
 .bouton-commentaire {
@@ -376,6 +389,15 @@ body {
     margin-right: 1vh;
     padding-left: 1vh;
     padding-right: 1vh;
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: red;
+        margin-right: 1vh;
+        a {
+            color: white;
+        }
+    }
 }
 .bouton-like-dislike {
     border: 1px solid red;
@@ -388,6 +410,9 @@ body {
 }
 .fa {
     padding: 0.5vh;
+    &:hover {
+        transform: scale(1.13);
+    }
 }
 
 /* <--Commentaires--> */
@@ -397,6 +422,9 @@ body {
     border-radius: 10px;
     padding: 1vh;
     margin: 1vh;
+}
+.text-com {
+    text-align:justify;
 }
 
 
@@ -629,20 +657,52 @@ a:active {
     color: #FFF;
 }
 .footer_mentions_legales {
-    color: white!important;
+    color: white;
     text-decoration: none;
     text-decoration-line: none;
-   
+    border: 2px solid red; 
+    border-radius: 30px; 
+    padding: 0.5vh; 
+    margin: 0.2vh;
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: white;
+        color: red;
+        font-weight:bold;
+    }
 }
 .footer_contact {
-    color: white!important;
+    color: white;
     text-decoration: none;
     text-decoration-line: none;
+    border: 2px solid red; 
+    border-radius: 30px; 
+    padding: 0.5vh; 
+    margin: 0.5vh;
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: white;
+        color: red;
+        font-weight:bold;
+    }
 }
-.footer_index{
-    color: white!important;
+.footer_index {
+    color: white;
     text-decoration: none;
     text-decoration-line: none;
+    border: 2px solid red; 
+    border-radius: 30px; 
+    padding: 0.5vh; 
+    margin: 0.5vh;
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: white;
+        color: red;
+        font-weight:bold;
+    }
 }
 
 @media screen and (min-width:750px) and (max-width:1100px) {

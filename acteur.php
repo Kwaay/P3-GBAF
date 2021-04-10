@@ -87,7 +87,7 @@
                             <h4><u>Date de la publication :</u> <?php echo htmlspecialchars($date, strtotime($infocom['date_add'])); ?></h4>
                         </div>
                         <div class="text-com">
-                            <h4><u>Contenu du commentaire :</u> <?php echo htmlspecialchars($infocom['post']); ?></h4>
+                            <h4><u>Contenu du commentaire :</u></h4> <?php echo htmlspecialchars($infocom['post']); ?>
                             
                         </div>
                     </div>   
