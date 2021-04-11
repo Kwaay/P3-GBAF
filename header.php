@@ -24,7 +24,7 @@
                 ?>
                     <div class="headerconnecte">
                         <div class="img-header">
-                            <a href="index.php"><img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
+                            <a href="index.php"><img src="images/logo_gbaf_p.png" height="125" width="125" alt="Logo GBAF" /></a>
                         </div>
                         <div class="infos-profil">
                             <a href="profil.php"><img src="membres/avatars/<?php echo htmlspecialchars ($avatar['avatar']) ?>" height="auto" width="50" alt="Photo de profil" /></a>

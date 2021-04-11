@@ -24,7 +24,7 @@ body {
     padding: 2vh;
 }
 .profil-button {
-    border: 2px solid red; 
+    border: 2px solid #a91b0d; 
     border-radius: 30px; 
     padding: 0.5vh; 
     text-align: center; 
@@ -34,14 +34,14 @@ body {
     
     &:hover {
         transform: scale(1.13);
-        background-color: red;
+        background-color: #a91b0d;
         a {
             color: white;
         }
     }
 }
 .deco-button {
-    border: 2px solid red; 
+    border: 2px solid #a91b0d; 
     border-radius: 30px; 
     padding: 0.5vh; 
     text-align: center; 
@@ -50,7 +50,7 @@ body {
     transition: all 450ms;
     &:hover {
         transform: scale(1.13);
-        background-color: red;
+        background-color: #a91b0d;
         a {
             color: white;
         }
@@ -79,7 +79,7 @@ body {
     display: inline-block;
 }
 .texte-gbaf h1 {
-    color: red;
+    color: #a91b0d;
 
 }
 
@@ -95,7 +95,7 @@ body {
     display: inline-block;  
 }
 .texte-partenaires h2 {
-    color:red;
+    color:#a91b0d;
 }
 
 /* <--Titres Partenaires--> */
@@ -103,15 +103,13 @@ body {
     padding-right: 3vw;
 }
 .text-container h3 {
-    color: red;
+    color: #a91b0d;
 }
 
 /* <--Partenaires--> */
 
 .partenaires {
-    border: 2px solid red;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
+    border: 2px solid #a91b0d;
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     max-width: 1500px;
     width: 90%;
@@ -127,7 +125,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     display:flex;
     align-items: center;
     
@@ -155,7 +153,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1500px; 
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     display:flex;
     align-items: center;
 }
@@ -183,7 +181,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     display:flex;
     align-items: center;
 }
@@ -211,7 +209,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     display:flex;
     align-items: center;
 }
@@ -235,7 +233,7 @@ body {
 /* <--Boutons Partenaires--> */
 
 .button-partenaires {
-    border: 2px solid red;
+    border: 2px solid #a91b0d;
     border-radius: 30px;
     box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.02);
     padding: 0.5vh;
@@ -248,7 +246,7 @@ body {
     transition: all 450ms;
     &:hover {
         transform: scale(1.13);
-        background-color: red;
+        background-color: #a91b0d;
         a {
             color: white;
         }
@@ -262,7 +260,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     height: 100%;
-    border: 1px solid red; 
+    border: 1px solid #a91b0d; 
     margin-bottom: 1vh;  
 }
 .text-formation-co-acteurs h2 {
@@ -280,8 +278,6 @@ body {
 }
 .img-partenaires img {
     border: 1px solid #a6a6a6;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
 }
 
@@ -293,7 +289,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     height: 100%;
-    border: 1px solid red; 
+    border: 1px solid #a91b0d; 
     margin-bottom: 1vh;  
 }
 .text-protectpeople-acteurs h2 {
@@ -317,7 +313,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     height: 100%;
-    border: 1px solid red; 
+    border: 1px solid #a91b0d; 
     margin-bottom: 1vh;  
 }
 .text-dsa-france-acteurs h2 {
@@ -341,7 +337,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     height: 100%;
-    border: 1px solid red; 
+    border: 1px solid #a91b0d; 
     margin-bottom: 1vh;  
 }
 .text-cde-acteurs h2 {
@@ -360,7 +356,7 @@ body {
 /* <-- Menu Commentaires--> */
 
 .commentaires {
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     padding: 1vh;
     width: 100%;
     max-width:1500px;
@@ -381,7 +377,7 @@ body {
 /* <--Bouton Commentaires--> */
 
 .bouton-commentaire {
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 10px;
     margin-left:auto;
     margin-bottom: auto;
@@ -392,7 +388,7 @@ body {
     transition: all 450ms;
     &:hover {
         transform: scale(1.13);
-        background-color: red;
+        background-color: #a91b0d;
         margin-right: 1vh;
         a {
             color: white;
@@ -400,28 +396,40 @@ body {
     }
 }
 .bouton-like-dislike {
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 10px;
     margin-bottom: auto;
     margin-right: 2vh;
     padding: 1vh;
     padding-left: 0.5vh;
     padding-right: 0.5vh;
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: #a91b0d;
+        .fa {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    }
 }
 .fa {
     padding: 0.5vh;
     &:hover {
-        transform: scale(1.13);
+        transform: scale(1.5);
     }
 }
 
 /* <--Commentaires--> */
 
 .info-commentaires {
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 10px;
     padding: 1vh;
     margin: 1vh;
+    word-wrap: break-word;
 }
 .text-com {
     text-align:justify;
@@ -430,70 +438,59 @@ body {
 
 /* <--Formulaire de Connexion--> */
 
-.connexion_form h3 {
-    color:#FF0000;
-    text-align:center;
-    padding: 10px;
-
-}
 .connexion_form {
-    text-align: center;
-    padding:10px;
-    width: 100%;
-    max-width: 500px;
+    border: 0.5vh solid black;
     margin: 0 auto;
-    background-color: #a6a6a6;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin-top: 5vh;
-    margin-bottom: 1vh;
-
-}
-.connexion_form label {
-    display: inline-block;
-    width: 25%;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 15vh;
+    box-shadow: 0px 0px 5px 1px black;
+    background-color: #cc4848;
 }
 
+.connexion_form p {
+  text-align: center;
+}
+.connexion_form h3 {
+    color: #800000 ;
+}
+.img {
+  padding: 2vh;
+}
 
 /* <--Formulaire d'Inscription--> */
 
 .inscription_form {
-    text-align: center;
-    padding:10px;
-    width: 100%;
-    max-width: 500px;
+    border: 0.5vh solid black;
     margin: 0 auto;
-    background-color: #a6a6a6;
-    border: 1px solid red;
-    border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    margin-top: 5vh;
-    margin-bottom: 2vh;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 15vh;
+    box-shadow: 0px 0px 5px 1px black;
+    background-color: #cc4848;
    
 }
-.inscription_form h3 {
-    color:#FF0000;
+.inscription_form p {
     text-align: center;
-
 }
-.inscription_form label {
+.inscription_form h3 {
+    color: #800000 ;
+}
+.img {
+    padding: 2vh;
+}
+.form_inscription {
     display: inline-block;
-    width: 25%;
 }
 /* <-- Mot de passe oublié --> */
 
 .success {
     text-align:center;
     padding:2vh;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     margin: 0 auto;
     width: 100%;
@@ -503,20 +500,18 @@ body {
 .forgot-form {
     margin: 0 auto;
     text-align: center;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     max-width: 500px;
     padding: 2vh;
     background-color: #a6a6a6;
 }
 .forgot-form h3 {
-    color: red;
+    color: #a91b0d;
 }
 .button-forgot {
-    border: 2px solid red;
+    border: 2px solid #a91b0d;
     border-radius: 30px;
     padding: 0.5vh;
 }
@@ -529,15 +524,13 @@ body {
     margin: 0 auto;
     margin-top: 2vh;
     padding:2vh;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     background-color: #a6a6a6;
 }
 .contact-form h3 {
-    color: red;
+    color: #a91b0d;
 }
 
 /* <-- Formulaire de commentaires --> */
@@ -548,15 +541,13 @@ body {
     margin: 0 auto;
     margin-top: 2vh;
     padding:2vh;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     background-color: #a6a6a6;
 }
 .commentaires_form h3 {
-    color: red;
+    color: #a91b0d;
 }
 
 /* <-- Formulaire de mot de passe oublié --> */
@@ -567,24 +558,20 @@ body {
     margin: 0 auto;
     margin-top: 2vh;
     padding:2vh;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     background-color: #a6a6a6;
 }
 .recovery-form h3 {
-    color: red;
+    color: #a91b0d;
 }
 
 
 /* <--Profil--> */
 .profil {
-    border: 2px solid red;
+    border: 2px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     max-width: 700px;
     width: 100%;
@@ -606,10 +593,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 2vh;
-    border: 1px solid red;
+    border: 1px solid #a91b0d;
     border-radius: 30px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     box-shadow: 0px 0px 5px 1px rgba(224,20,20,1);
     margin-bottom: 2vh;
     margin-top: 2vh;
@@ -618,13 +603,13 @@ body {
 /* <--Liens--> */
 
 a:link {
-    color:red;
+    color:#800000;
     text-decoration: none;
     text-decoration-line: none;
 }
 
 a:visited {
-    color: red;
+    color: #800000;
     text-decoration: none;
     text-decoration-line: none;
 }
@@ -643,7 +628,7 @@ a:active {
 /* <--Footer--> */
 
 .footer{
-    background-color:#FF0000;
+    background-color:#a91b0d;
     color:#FFF;
     text-align:center;
     padding:0.5vh;
@@ -660,7 +645,7 @@ a:active {
     color: white;
     text-decoration: none;
     text-decoration-line: none;
-    border: 2px solid red; 
+    border: 2px solid #a91b0d; 
     border-radius: 30px; 
     padding: 0.5vh; 
     margin: 0.2vh;
@@ -668,7 +653,7 @@ a:active {
     &:hover {
         transform: scale(1.13);
         background-color: white;
-        color: red;
+        color: #a91b0d;
         font-weight:bold;
     }
 }
@@ -676,7 +661,7 @@ a:active {
     color: white;
     text-decoration: none;
     text-decoration-line: none;
-    border: 2px solid red; 
+    border: 2px solid #a91b0d; 
     border-radius: 30px; 
     padding: 0.5vh; 
     margin: 0.5vh;
@@ -684,7 +669,7 @@ a:active {
     &:hover {
         transform: scale(1.13);
         background-color: white;
-        color: red;
+        color: #a91b0d;
         font-weight:bold;
     }
 }
@@ -692,7 +677,7 @@ a:active {
     color: white;
     text-decoration: none;
     text-decoration-line: none;
-    border: 2px solid red; 
+    border: 2px solid #a91b0d; 
     border-radius: 30px; 
     padding: 0.5vh; 
     margin: 0.5vh;
@@ -700,7 +685,7 @@ a:active {
     &:hover {
         transform: scale(1.13);
         background-color: white;
-        color: red;
+        color: #a91b0d;
         font-weight:bold;
     }
 }

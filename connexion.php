@@ -11,7 +11,6 @@
     </head>
         
     <body>
-        <?php include ("header.php") ?>
         <?php
             require('config.php');
             // Système de récupération des données du formulaire de connexion //
@@ -35,30 +34,32 @@
                 }
             }
         ?>
-
-        <div class="connexion_form">
-            <h3><u>Connexion à l'Extranet</u></h3>
-            <form method="POST">
-                <div class="form_pseudo">
-                    <label for="username"><u>Pseudonyme :</u></label>
-                    <input type="text" name="username" id="username" placeholder="Votre pseudo">
-                </div>
+         <div class="connexion_form">
+            <div class="img">
+                <img src="images/logo_gbaf_p.png" height="125" width="125" alt="Logo GBAF" /></a>
+            </div>
+            <br />
+                <h3><u>Connexion à l'Extranet</u></h3>
+                <form method="POST">
+                    <div class="form_pseudo">
+                        <label for="username"><u>Pseudonyme :</u></label>
+                        <input type="text" name="username" id="username" placeholder="Votre pseudo">
+                    </div>
+                    <br />
+                    <div class="form_password">
+                        <label for="password"><u>Mot de passe :</u></label>
+                        <input type="password" name="password" id="password" placeholder="Votre mot de passe">
+                    </div>
+                    <br />
+                    <div class="form_submit">
+                        <input type="submit" value="Se connecter">
+                    </div>
+                </form>
                 <br />
-                <div class="form_password">
-                    <label for="password"><u>Mot de passe :</u></label>
-                    <input type="password" name="password" id="password" placeholder="Votre mot de passe">
-                </div>
+                <p>Pas encore inscrit ? <a href="inscription.php" class="link-button">S'inscrire</a>
                 <br />
-                <div class="form_submit">
-                    <input type="submit" value="Se connecter">
-                </div>
-            </form>
-            <br>
-            <p>Pas encore inscrit ? <a href="inscription.php" class="link-button">S'inscrire</a></p>
-            <p><a href="recovery.php" class="link-button">Mot de passe oublié ?</a></p>
-            <br>
+                <a href="recovery.php" class="link-button">Mot de passe oublié ?</a></p>
         </div>
-
         <?php include ("footer.php") ?>
 
 

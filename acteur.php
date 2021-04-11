@@ -34,7 +34,6 @@
     // Format de la date //
     $date=date('d/m/Y');
 
-
     
 
 ?>
@@ -88,9 +87,9 @@
                         </div>
                         <div class="text-com">
                             <h4><u>Contenu du commentaire :</u></h4> <?php echo htmlspecialchars($infocom['post']); ?>
-                            
                         </div>
-                    </div>   
+                    </div> 
+                    
                     <?php 
                         }
                         $retourcom->closeCursor();
