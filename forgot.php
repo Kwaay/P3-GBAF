@@ -10,7 +10,6 @@
     </head>
         
     <body>
-        <?php include ("header.php"); ?>
         <?php
             require ('config.php');
             // Système de modification de mot de passe connecté //
@@ -37,23 +36,26 @@
             ?>
             
             <div class="forgot-form">
-            <h3><u>Modification de votre mot de passe</u></h3>
-            <form method="POST">
-                <div class="text-zone">
-                    <label for="password"><u>Votre nouveau mot de passe :</u></label>
-                    <br />
-                    <br />
-                    <input type="password" name="password" id="password" placeholder="Votre nouveau MDP">
+                <div class="img">
+                    <img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
                 </div>
+                <br />
+                <h3><u>Modification de votre mot de passe</u></h3>
+                <form method="POST">
+                    <div class="text-zone">
+                        <label for="password"><u>Votre nouveau mot de passe :</u></label>
+                        <br />
+                        <br />
+                        <input type="password" name="password" id="password" placeholder="Votre nouveau MDP">
+                    </div>
+                    <br>
+                    <div class="form_submit">
+                        <input type="submit" name="submit" value="Envoyer">
+                    </div>
+                
+                </form>
                 <br>
-                <div class="form_submit">
-                    <input type="submit" name="submit" value="Envoyer">
-                </div>
-               
-            </form>
-            <br>
-            <p>Vous avez retrouvé votre mot de passe ? <a href="connexion.php" class="link-button">Se connecter</a></p>
-            <br>
-        </div>
-        <?php include ("footer.php") ?>
+                <p>Vous avez retrouvé votre mot de passe ? <a href="connexion.php" class="link-button">Se connecter</a></p>
+                <br>
+            </div>
 

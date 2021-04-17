@@ -11,7 +11,6 @@
     </head>
         
     <body>
-        <?php include ('header.php'); ?>
         <?php 
         require ("config.php");
             // Système d'ajout de commentaires //
@@ -45,13 +44,17 @@
             
     
         <div class="commentaires_form" style="text-align:center;">
+            <div class="img">
+                <img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
+            </div>
+            <br />
             <h3><u>Créer un commentaire</u></h3>
             <form method="POST">
                 <div>
                     <label for="post"><u>Contenu du commentaire :</u>
                     <br />
                     <br />
-                       <input type="text" name="post" id="post" placeholder="Ecrivez ici"  size="50" style="height:250px;">
+                       <input type="text" name="post" id="post" placeholder="Ecrivez ici"  size="50">
                     </label>
                 </div>
                 <br />
@@ -59,5 +62,4 @@
             </form>
                 <br />
         </div>
-        <?php include ('footer.php'); ?>
         

@@ -36,7 +36,7 @@
         ?>
          <div class="connexion_form">
             <div class="img">
-                <img src="images/logo_gbaf_p.png" height="125" width="125" alt="Logo GBAF" /></a>
+                <img src="images/logo_gbaf_p3.png" height="125" width="125" alt="Logo GBAF" /></a>
             </div>
             <br />
                 <h3><u>Connexion à l'Extranet</u></h3>
